@@ -31,3 +31,13 @@ spring:
     # database-platform: org.hibernate.dialect.PostgreSQLDialect
     # open-in-view: false
     # generate-ddl: true
+
+springdoc:
+  packages-to-scan: com.colabear754.springdoc_example.controllers
+  default-consumes-media-type: application/json;charset=UTF-8
+  default-produces-media-type: application/json;charset=UTF-8
+  swagger-ui:
+    path: /
+    disable-swagger-default-url: true
+    display-request-duration: true
+    operations-sorter: alpha
