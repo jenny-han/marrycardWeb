@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jnhn.webService.domain.sample.model.Test;
-import com.jnhn.webService.domain.sample.repository.TestRepository;
+import com.jnhn.webService.model.Test;
+import com.jnhn.webService.repository.TestRepository;
 
 @Service
 public class SampleService {

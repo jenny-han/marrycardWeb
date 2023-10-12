@@ -1,4 +1,6 @@
-package com.jnhn.webService.domain.sample.model;
+package com.jnhn.webService.model;
+
+import java.util.Date;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -11,10 +13,14 @@ import lombok.Setter;
 @Setter
 @Entity
 @NoArgsConstructor
-@Table(name = "test")
-public class Test {
+@Table(name = "template")
+public class Template {
   @Id
-  private String name;
+  private int id;
 
-  private int age;
+  private String structJson;
+
+  private Date createDate;
+
+  private Date modifyDate;
 }
