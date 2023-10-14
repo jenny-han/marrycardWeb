@@ -1,13 +1,11 @@
-import styled from 'styled-components';
-
-const SampleBlock = styled.div``
+import { Button } from '@mui/material'
 
 const Sample = () => {
-    return (
-        <SampleBlock>
-            
-        </SampleBlock>
-    );
+  return (
+    <Button variant="contained" color="primary" href="/editor">
+      입장하기
+    </Button>
+  )
 }
 
-export default Sample;
+export default Sample
