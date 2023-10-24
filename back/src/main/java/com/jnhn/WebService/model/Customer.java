@@ -1,7 +1,5 @@
 package com.jnhn.webService.model;
 
-import java.util.Date;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -14,7 +12,7 @@ import lombok.Setter;
 @Entity
 @NoArgsConstructor
 @Table(name = "customer")
-public class Customer {
+public class Customer extends DateTime {
   @Id
   private String id;
 
@@ -25,8 +23,4 @@ public class Customer {
   private String name;
 
   private String socialLoginYn;
-
-  private Date createDate;
-
-  private Date modifyDate;
 }

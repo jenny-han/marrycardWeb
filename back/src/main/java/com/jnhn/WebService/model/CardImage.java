@@ -1,9 +1,10 @@
 package com.jnhn.webService.model;
 
-import java.util.Date;
-
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,9 +14,11 @@ import lombok.Setter;
 @Setter
 @Entity
 @NoArgsConstructor
+@SequenceGenerator(name = "CARD_IMG_SEQ_GEN", sequenceName = "CARD_IMG_SEQ", initialValue = 1, allocationSize = 1)
 @Table(name = "card_image")
-public class CardImage {
+public class CardImage extends DateTime {
   @Id
+  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "CARD_IMG_SEQ_GEN")
   private int id;
 
   private int cardId;
@@ -27,8 +30,4 @@ public class CardImage {
   private String contentsType;
 
   private String imageData;
-
-  private Date createDate;
-
-  private Date modifyDate;
 }
