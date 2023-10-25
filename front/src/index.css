@@ -12,3 +12,17 @@ code {
     monospace;
 }
 
+/* 폰트 : 꽃내음 */
+@font-face {
+  font-family: 'Gootneaeum';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_05@1.0/Gootneaeum.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/* 폰트 : 어비 혜키체 */
+@font-face {
+  font-family: 'UhBeeHyeki';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeHyeki.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  }
