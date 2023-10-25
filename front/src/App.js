@@ -3,6 +3,7 @@ import SamplePage from './pages/SamplePage'
 import './App.css'
 import Layout from './Layout'
 import EditorPage from './pages/EditorPage'
+import AppViewPage from './pages/AppViewPage'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path="/" element={<SamplePage />} />
         <Route path="/editor" element={<EditorPage />} />
       </Route>
+      <Route path="/card/:url" element={<AppViewPage />}/>
     </Routes>
   )
 }
