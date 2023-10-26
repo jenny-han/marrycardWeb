@@ -9,6 +9,9 @@ import MapPlace from '../../components/preview/MapPlace'
 import GuestBook from '../../components/preview/GuestBook'
 import ShareLink from '../../components/preview/ShareLink'
 
+import ImageBox from '../../components/common/ImageBox'
+import weddingImg from '../../lib/img/weddingImage.jpg'
+
 const AppViewContainer = () => {
   return (
     <>
@@ -17,6 +20,8 @@ const AppViewContainer = () => {
 
       {/* 청첩문구 */}
       <Invitation />
+      {/* 중간 이미지 */}
+      <ImageBox imgUrl={weddingImg} alt="jyhsImg" width="100%" />
 
       {/* 캘린더 및 디데이 */}
       <Calendar />
