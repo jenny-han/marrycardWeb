@@ -7,6 +7,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,6 +21,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 // import lombok.RequiredArgsConstructor;
 
 @Tag(name = "sample api", description = "sample test api")
+@RequestMapping("/api/sample")
 @RestController
 // @RequiredArgsConstructor
 public class SampleController {
@@ -27,9 +29,9 @@ public class SampleController {
   @Autowired
   SampleService sampleService;
 
-  @Operation(summary = "조회", description = "sample search")
-  @GetMapping("/sample")
-  public List<Test> sample() {
+  @Operation(summary = "조회", description = "test search")
+  @GetMapping("/test")
+  public List<Test> test() {
     return sampleService.getTestList();
   }
 

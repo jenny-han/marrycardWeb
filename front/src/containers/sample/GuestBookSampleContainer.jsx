@@ -1,27 +1,32 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
+import axiosInstance from '../../lib/api/request';
 
 const GuestBookSampleContainer = () => {
     const columns = [
-        { field: 'id', headerName: 'ID', width: 70 },
-        { field: 'firstName', headerName: 'First name', width: 130 },
-        { field: 'lastName', headerName: 'Last name', width: 130 },
-        {
-            field: 'age',
-            headerName: 'Age',
-            type: 'number',
-            width: 90,
-        },
-        {
-            field: 'fullName',
-            headerName: 'Full name',
-            description: 'This column has a value getter and is not sortable.',
-            sortable: false,
-            width: 160,
-            valueGetter: (params) =>
-            `${params.row.firstName || ''} ${params.row.lastName || ''}`,
-        },
+        { field: 'name', headerName: '이름', width: 70 },
+        { field: 'contents', headerName: '내용', width: 260 }
     ];
+
+    const [pageNumber, setPageNumber] = useState(0);    
+    const [rows, setRows] = useState([]);
+
+    // 리스트 불러오기
+    const getList = useCallback(() => {
+        axiosInstance.get(`/sample/guestbooks/page`,{params: { cardId:1, pageNumber, pageSize: 3}})
+        .then(res => {
+            console.log(res.data)
+            if(Array.isArray(res.data.content))
+                setRows(res.data.content);
+            else
+                setRows([]);
+        })
+        .catch(err=>console.log(err));
+    }, [pageNumber])
+
+    useEffect(()=>{
+        getList();
+    }, []);
 
     return (
         <div style={{ height: 400, width: '100%' }}>

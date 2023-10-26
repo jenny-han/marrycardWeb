@@ -14,8 +14,10 @@ spring:
   # Database
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/marrydb
-    # platform: postgres
+    # url: ${SPRING_DATASOURCE_URL}
+    # username: ${SPRING_DATASOURCE_USERNAME}
+    # password: ${SPRING_DATASOURCE_PASSWORD}
+    url: jdbc:postgresql://localhost:5432/marrydb?autoReconnect=true
     username: marry
     password: 1234
   # jpa properties
@@ -39,7 +41,7 @@ springdoc:
   default-consumes-media-type: application/json;charset=UTF-8
   default-produces-media-type: application/json;charset=UTF-8
   swagger-ui:
-    path: /
+    path: api/
     disable-swagger-default-url: true
     display-request-duration: true
     operations-sorter: alpha
