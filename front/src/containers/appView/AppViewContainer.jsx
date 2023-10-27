@@ -6,8 +6,10 @@ import Greeting from '../../components/preview/Greeting'
 import PhotoGallery from '../../components/preview/PhotoGallery'
 import Account from '../../components/preview/Account'
 import MapPlace from '../../components/preview/MapPlace'
-import GuestBook from '../../components/preview/GuestBook'
+// import GuestBook from '../../components/preview/GuestBook'
 import ShareLink from '../../components/preview/ShareLink'
+
+import GuestBook from '../../containers/appView/GuestBook/GuestBook'
 
 import ImageBox from '../../components/common/ImageBox'
 import weddingImg from '../../lib/img/weddingImage.jpg'

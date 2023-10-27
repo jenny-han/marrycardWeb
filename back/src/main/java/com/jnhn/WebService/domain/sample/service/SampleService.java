@@ -30,12 +30,16 @@ public class SampleService {
     return guestBookRepository.findAll();
   }
 
-  public List<GuestBook> getGuestbookList(int cardId, int pageNumber, int pageSize) {
-    return guestBookRepository.getLastGuestBooks(cardId, PageRequest.of(pageNumber, pageSize));
-  }
-
   public Page<GuestBook> findByCardId(int cardId, int pageNumber, int pageSize) {
     return guestBookRepository.findByCardId(cardId, PageRequest.of(pageNumber, pageSize));
+  }
+
+  public List<GuestBook> getFirstGuestBooks(int cardId, int pageNumber, int pageSize) {
+    return guestBookRepository.getFirstGuestBooks(cardId, PageRequest.of(pageNumber, pageSize));
+  }
+
+  public List<GuestBook> getPartofGuestBooks(int cardId, int lastId, int pageSize) {
+    return guestBookRepository.getPartofGuestBooks(cardId, lastId, pageSize);
   }
 
   public Integer saveGuestbook(GuestBook guestBook) {

@@ -13,8 +13,29 @@ import com.jnhn.webService.model.GuestBook;
 
 public interface GuestBookRepository extends JpaRepository<GuestBook, Long> {
 
-  @Query(nativeQuery = true, value = "SELECT * FROM guest_book WHERE card_id = :cardId ORDER BY create_date DESC")
-  public List<GuestBook> getLastGuestBooks(@Param(value = "cardId") int cardId, Pageable pageable);
-
   public Page<GuestBook> findByCardId(@Param(value = "cardId") int cardId, Pageable pageable);
+
+  @Query(nativeQuery = true, value = "SELECT * " +
+      "FROM guest_book " +
+      "WHERE card_id = :cardId " +
+      "ORDER BY create_date DESC ")
+  public List<GuestBook> getFirstGuestBooks(
+      @Param(value = "cardId") int cardId,
+      Pageable pageable);
+
+  @Query(nativeQuery = true, value = "WITH last_record AS ( " +
+      "  SELECT create_date " +
+      "  FROM guest_book " +
+      "  WHERE id = :lastId " +
+      ")" +
+      "SELECT gb.* " +
+      "FROM guest_book gb, last_record l " +
+      "WHERE gb.card_id = :cardId " +
+      "AND gb.create_date < l.create_date " +
+      "ORDER BY create_date DESC " +
+      "LIMIT :pageSize ")
+  public List<GuestBook> getPartofGuestBooks(
+      @Param(value = "cardId") int cardId,
+      @Param(value = "lastId") int lastId,
+      @Param(value = "pageSize") int pageSize);
 }
