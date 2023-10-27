@@ -15,17 +15,27 @@ const CalendarDdayDiv = styled.div`
 
 const CalendarDday = (props) => {
   const { wd_date } = props
-  let todaydate = new Date()
+  let now = new Date()
+
+  let nowyear = now.getFullYear()
+  let nowmonth = now.getMonth()
+  let nowday = now.getDate()
+  let todaydate = new Date(nowyear, nowmonth, nowday)
+  // let todaydate = new Date(2023, 9, 28)
+
+  console.log(todaydate)
   let year = wd_date.substring(0, 4)
   let month = wd_date.substring(4, 6)
   let day = wd_date.substring(6, 8)
   let hour = wd_date.substring(8, 10)
   let minute = wd_date.substring(10, 12)
   //   console.log(wd_date, year, month, day, hour, minute)
-  let weddingdate = new Date(year, parseInt(month) - 1, day, hour, minute)
-  //   console.log(weddingdate)
+  // let weddingdate = new Date(year, parseInt(month) - 1, day, hour, minute)
+  let weddingdate = new Date(year, parseInt(month) - 1, day)
+  // console.log(weddingdate)
   let diffdate = weddingdate.getTime() - todaydate.getTime()
-  let caldday = Math.round(diffdate / (1000 * 60 * 60 * 24))
+  // console.log(diffdate)
+  let caldday = Math.floor(diffdate / (1000 * 60 * 60 * 24))
   let ddaytext =
     Math.abs(caldday) + '일' + (caldday > 0 ? ' 남았습니다.' : ' 지났습니다.')
 

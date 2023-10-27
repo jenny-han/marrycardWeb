@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import mainImg from '../../lib/img/main_2.jpeg'
+import mainImg from '../../lib/img/main_2.png'
 // import mainImg from '../../lib/img/main_img3.jpeg'
 
 import ImageBox from '../common/ImageBox'
@@ -22,7 +22,8 @@ const InfoBox = styled.div`
   flex-direction: column;
 `
 const InfoBoxTest = styled(InfoBox)`
-  position: absolute;
+  // position: relative;
+  // top:200
 `
 const MainInfo = styled.div`
   font-size: 1.4em;
@@ -63,15 +64,15 @@ const MainCover = () => {
   return (
     <MainCoverBlock>
       <ImageBox imgUrl={mainImg} alt="main_text" width="100%" />
-      <InfoBoxTest>
+      {/* <InfoBoxTest>
         <MainTextTest> 23 | 12 | 09 </MainTextTest>
         <MainInfo>
           김준연 <span style={{ fontSize: '.7em' }}>♥︎</span> 양혜수
         </MainInfo>
         <div>2023. 12. 09 (토) 오후 03시 30분</div>
         <div>라온제나 분당 8층 플로렌스홀 </div>
-        {/* <ImageCard src={mainImg} alt="main_img" /> */}
-      </InfoBoxTest>
+        <ImageCard src={mainImg} alt="main_img" />
+      </InfoBoxTest> */}
       {/* <InfoBox> */}
       {/* <ImageBox imgUrl={mainText} alt="main_text" width="100%" /> */}
 

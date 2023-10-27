@@ -74,7 +74,7 @@ const MapPlace = () => {
             {addr}
             <CopyImg onClick={doCopyAddr} />
             <br />
-            (야탑동 366-1) / (판교역 5분, 판고IC 7분)
+            (야탑동 366-1) / (판교역 5분, 판교 IC 7분)
           </LocationAddr>
         </LocationInfo>
       </MapInfoBox>

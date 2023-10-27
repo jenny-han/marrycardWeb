@@ -23,10 +23,10 @@ export const sendMessage = () => {
         buttons: [
           {
             title: '자세히 보기',
-            link: {
-              mobileWebUrl: 'https://onlyone-weddingcard.netlify.app/',
-              webUrl: 'https://onlyone-weddingcard.netlify.app/',
-            },
+              link: { 
+            mobileWebUrl: 'https://ch-wedding.kr/card/jyhs1209',
+             webUrl: 'https://ch-wedding.kr/card/jyhs1209',
+          },
           },
           {
             title : '위치 보기',
