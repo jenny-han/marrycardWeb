@@ -4,7 +4,7 @@ import inviteMsgImg from '../../lib/img/invitationMessage.png'
 import CardTitleText from '../common/CardTitleText'
 
 const InvitationBlock = styled.div`
-  background-color: rgb(155 157 132 / 23%);
+  // background-color: rgb(155 157 132 / 23%);
   padding: 10vw 0vw;
 `
 

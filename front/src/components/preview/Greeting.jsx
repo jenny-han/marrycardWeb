@@ -12,8 +12,8 @@ const CoupleBoxGroup = styled.div`
   font-size: 0;
   max-width: 250vw;
   margin-top: 5vw;
-  transition: 2s all;
-  transition-delay: 500ms;
+  // transition: 2s all;
+  // transition-delay: 500ms;
 `
 const FamilyBoxGroup = styled.div``
 

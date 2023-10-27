@@ -1,13 +1,12 @@
 import styled from 'styled-components'
-// import mainImg from '../../lib/img/main_img2.jpeg'
-import mainImg from '../../lib/img/main_img3.jpeg'
+import mainImg from '../../lib/img/main_2.jpeg'
+// import mainImg from '../../lib/img/main_img3.jpeg'
 
 import ImageBox from '../common/ImageBox'
 // import mainText from '../../lib/img/maintext.png'
-// import mainText from '../../lib/img/title_img.png'
 const MainCoverBlock = styled.div`
   margin: 0;
-  padding: 5vw 0;
+  // padding: 5vw 0;
 `
 const InfoBox = styled.div`
   width: 100%;
@@ -22,13 +21,26 @@ const InfoBox = styled.div`
   align-items: center;
   flex-direction: column;
 `
-const MainInfo = styled.div``
+const InfoBoxTest = styled(InfoBox)`
+  position: absolute;
+`
+const MainInfo = styled.div`
+  font-size: 1.4em;
+  margin-bottom: 2vw;
+`
 const MainText = styled.div`
   font-size: 1em;
   font-family: 'KyoboHand';
   color: #999;
   margin-top: 2px;
   padding: 2px 30px;
+`
+const MainTextTest = styled(MainText)`
+  font-family: 'JeonjuCraftGoR';
+  letter-spacing: 4pt;
+  margin-bottom: 70px;
+  font-weight: 800;
+  color: #555;
 `
 
 const ImageCard = styled.img`
@@ -50,17 +62,27 @@ const ImageCard = styled.img`
 const MainCover = () => {
   return (
     <MainCoverBlock>
-      <InfoBox>
-        {/* <ImageBox imgUrl={mainText} alt="main_text" width="100%" /> */}
+      <ImageBox imgUrl={mainImg} alt="main_text" width="100%" />
+      <InfoBoxTest>
+        <MainTextTest> 23 | 12 | 09 </MainTextTest>
+        <MainInfo>
+          김준연 <span style={{ fontSize: '.7em' }}>♥︎</span> 양혜수
+        </MainInfo>
+        <div>2023. 12. 09 (토) 오후 03시 30분</div>
+        <div>라온제나 분당 8층 플로렌스홀 </div>
+        {/* <ImageCard src={mainImg} alt="main_img" /> */}
+      </InfoBoxTest>
+      {/* <InfoBox> */}
+      {/* <ImageBox imgUrl={mainText} alt="main_text" width="100%" /> */}
 
-        <MainText> 어느 겨울날❄️, 결혼합니다 ❤️ </MainText>
+      {/* <MainText> 어느 겨울날❄️, 결혼합니다 ❤️ </MainText>
         <MainInfo>
           김준연 <span style={{ fontSize: '.7em' }}>그리고</span> 양혜수
-        </MainInfo>
-        {/* <div>2023. 12. 09 (토) 오후 03시 30분</div>
+        </MainInfo> */}
+      {/* <div>2023. 12. 09 (토) 오후 03시 30분</div>
         <div>라온제나 분당 8층 플로렌스홀 </div> */}
-        <ImageCard src={mainImg} alt="main_img" />
-      </InfoBox>
+      {/* <ImageCard src={mainImg} alt="main_img" />
+      </InfoBox> */}
     </MainCoverBlock>
   )
 }
