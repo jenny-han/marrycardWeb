@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, FreeMode, Navigation, Thumbs } from 'swiper'
+import { Pagination, FreeMode, Navigation, Thumbs } from 'swiper/modules'
 
 // import Swiper and modules styles
 import 'swiper/css'
