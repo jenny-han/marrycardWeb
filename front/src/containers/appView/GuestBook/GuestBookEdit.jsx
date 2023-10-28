@@ -41,7 +41,7 @@ const GuestBookEdit = ({
         return true;
     };
 
-    const memoEdit = ()=>setIsEdit(true);
+    const memoEdit = ()=>setIsEdit(!isEdit);
 
     const onSubmit = (e)=>{
         e.preventDefault();
