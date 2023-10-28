@@ -7,64 +7,57 @@ import axiosInstance from '../../../lib/api/request';
 
 const GuestBook = () => {
     const [guestBookList, setGuestBookList] = useState([]);
-    // const [maxLength, setMaxLength] = useState(0);
     const [lastId, setlastId] = useState(0);
     const [isMore, setIsMore] = useState(false);
 
     const cardId = 1;
     const PAGE_SIZE = 3;
 
-    const loadGuestBookList = (lastId) => {
-        let apiAddr = '';
-        let params = {};
-        if(lastId === 0) {
-            apiAddr = `api/sample/guestbooks/page`;
-            params = { cardId, pageNumber: 0, pageSize: PAGE_SIZE};
-        } else {
-            apiAddr = `api/sample/guestbooks/page/lastId`;
-            params = { cardId, lastId, pageSize: PAGE_SIZE};
-        }
-
-        axiosInstance.get(apiAddr, {params})
-        .then(res => {
-            if(Array.isArray(res.data)) {
-                const list = res.data;
-                setIsMore(list.length === PAGE_SIZE);
-                setlastId(list[list.length-1].id);
-                if(lastId === 0) {
-                    setGuestBookList(list);
-                } else {
-                    setGuestBookList([...guestBookList, ... list]);
-                }
-                
-            } else
-                setGuestBookList([]);
-        })
-        .catch(err=>console.log(err));
-    }
-
     const onClickMoreItem = () => {
         if(isMore) {
-            console.log(lastId)
-            loadGuestBookList(lastId);
+            setlastId(guestBookList[guestBookList.length-1].id);
         } else {
-            loadGuestBookList(0);
+            setlastId(0);
         }
     }
 
     useEffect(()=>{
-        loadGuestBookList(0);
-    },[]);
+        const loadGuestBookList = () => {
+            let apiAddr = '';
+            let params = {};
+            if(lastId === 0) {
+                apiAddr = `api/sample/guestbooks/page`;
+                params = { cardId, pageNumber: 0, pageSize: PAGE_SIZE};
+            } else {
+                apiAddr = `api/sample/guestbooks/page/lastId`;
+                params = { cardId, lastId, pageSize: PAGE_SIZE};
+            }
 
-    // useEffect(()=>{
-    //     loadGuestBookList();
-    // },[lastId]);
+            axiosInstance.get(apiAddr, {params})
+            .then(res => {
+                if(Array.isArray(res.data)) {
+                    const list = res.data;
+                    setIsMore(list.length === PAGE_SIZE);
+                    if(lastId === 0) {
+                        setGuestBookList(list);
+                    } else {
+                        setGuestBookList((prev)=>[...prev, ...list]);
+                    }
+                    
+                } else
+                    setGuestBookList([]);
+            })
+            .catch(err=>console.log(err));
+        };
+
+        loadGuestBookList();
+    }, [lastId]);
 
     return (
         <>
             { guestBookList.length === 0 && <Empty />}
 
-            <GuestBookEdit loadList={()=>loadGuestBookList(0)}/>
+            <GuestBookEdit loadList={()=>setlastId(0)}/>
 
             {
                 guestBookList.map((item) => {
@@ -72,7 +65,7 @@ const GuestBook = () => {
                         <GuestBookItem 
                             key={item.id}
                             data={item}
-                            loadList={()=>loadGuestBookList(0)} />
+                            loadList={()=>setlastId(0)} />
                     );
                 })
             }
