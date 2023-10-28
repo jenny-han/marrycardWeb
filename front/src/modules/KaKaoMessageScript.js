@@ -16,16 +16,16 @@ export const sendMessage = () => {
           description: '2023. 12. 09 (토) 오후 03시 30분, 야탑역 라온제나 분당 8층 플로렌스홀',
           imageUrl:'https://k.kakaocdn.net/dn/lILdz/btszlwQ8EYB/PFMEhKlSPSJNkVSD5s5aPK/kakaolink40_original.jpg',
           link: { 
-            mobileWebUrl: 'https://ch-wedding.kr/card/jyhs1209',
-             webUrl: 'https://ch-wedding.kr/card/jyhs1209',
+            mobileWebUrl: 'http://ch-wedding.kr/card/jyhs1209',
+             webUrl: 'http://ch-wedding.kr/card/jyhs1209',
           },
         },
         buttons: [
           {
             title: '자세히 보기',
               link: { 
-            mobileWebUrl: 'https://ch-wedding.kr/card/jyhs1209',
-             webUrl: 'https://ch-wedding.kr/card/jyhs1209',
+            mobileWebUrl: 'http://ch-wedding.kr/card/jyhs1209',
+             webUrl: 'http://ch-wedding.kr/card/jyhs1209',
           },
           },
           {

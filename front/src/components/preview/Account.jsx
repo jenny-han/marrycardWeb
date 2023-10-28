@@ -13,7 +13,9 @@ const AccountBlock = styled.div`
 const TitleBoxWithMsg = styled.div`
   margin-bottom: 5vw;
 `
-const MsgBox = styled.div``
+const MsgBox = styled.div`
+  font-size: 1.5em;
+`
 
 const Account = () => {
   return (
