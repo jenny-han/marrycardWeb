@@ -1,9 +1,22 @@
 import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
 
 import {Empty, MoreBtn} from '../../../components/preview/guestBook'
 import GuestBookEdit from './GuestBookEdit.jsx';
 import GuestBookItem from './GuestBookItem.jsx';
 import axiosInstance from '../../../lib/api/request';
+
+const GuestBookTitle = styled.div`
+    text-align: center;
+    font-weight: bolder;
+    position: relative;
+    margin: 5vw 0 ;
+    transform: translate(50%);
+    width: 50%;
+    font-size: 4.5vw;
+    color: #805338;
+    letter-spacing: 1vw;
+`
 
 const GuestBook = () => {
     const [guestBookList, setGuestBookList] = useState([]);
@@ -55,6 +68,9 @@ const GuestBook = () => {
 
     return (
         <>
+            <GuestBookTitle>
+                축하메세지
+            </GuestBookTitle>
             { guestBookList.length === 0 && <Empty />}
 
             <GuestBookEdit loadList={()=>setlastId(0)}/>
