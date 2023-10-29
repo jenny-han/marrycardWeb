@@ -19,35 +19,63 @@ const ThumbImage = styled.img`
   max-height: 100vw;
 `
 
-const MySwiperSlider = styled(SwiperSlide)`
-  text-align: center;
-  font-size: 2vw;
-  margin-bottom: 5vw;
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  height: auto;
-`
+// const MySwiperSlider = styled(SwiperSlide)`
+//   text-align: center;
+//   font-size: 2vw;
+//   margin-bottom: 5vw;
+//   /* Center slide text vertically */
+//   display: -webkit-box;
+//   display: -ms-flexbox;
+//   display: -webkit-flex;
+//   display: flex;
+//   -webkit-box-pack: center;
+//   -ms-flex-pack: center;
+//   -webkit-justify-content: center;
+//   justify-content: center;
+//   -webkit-box-align: center;
+//   -ms-flex-align: center;
+//   -webkit-align-items: center;
+//   align-items: center;
+//   height: auto;
+// `
+// const MyThumbSlider = styled(SwiperSlide)`
+//   align-items: center;
+//   display: flex;
+//   font-size: 2vw;
+//   justify-content: center;
+//   margin-bottom: 5vw;
+//   text-align: center;
+//   height: auto;
+// `
+const MySwiperSlider = {
+  'textAlign': 'center',
+  'fontSize': '2vw',
+  'marginBottom': '5vw',
+  'display': '-webkit-box',
+  'display': '-ms-flexbox',
+  'display': '-webkit-flex',
+  'display': 'flex',
+  'WebkitBoxPack': 'center',
+  'MsFlexPack': 'center',
+  'WebkitJustifyContent': 'center',
+  'justifyContent': 'center',
+  'WebkitBoxAlign': 'center',
+  'MsFlexAlign': 'center',
+  'WebkitAlignItems': 'center',
+  'alignItems': 'center',
+  'height': 'auto'
+}
 
-const MyThumbSlider = styled(SwiperSlide)`
-  align-items: center;
-  display: flex;
-  font-size: 2vw;
-  justify-content: center;
-  margin-bottom: 5vw;
-  text-align: center;
-  height: auto;
-`
+const MyThumbSlider = {
+  'alignItems': 'center',
+  'display': 'flex',
+  'fontSize': '2vw',
+  'justifyContent': 'center',
+  'marginBottom': '5vw',
+  'textAlign': 'center',
+  'height': 'auto'
+}
+
 const MySwiperSub = styled(Swiper)``
 const SwiperSlider = () => {
   const [swiper, setSwiper] = useState(null)
@@ -76,9 +104,14 @@ const SwiperSlider = () => {
       >
         {GallaryImage.map((slide, index) => {
           return (
-            <MySwiperSlider key={index}>
+            <SwiperSlide 
+              style={MySwiperSlider}
+              key={index}>
               <ThumbImage src={slide.image} alt="gallary" />
-            </MySwiperSlider>
+            </SwiperSlide>
+            // <MySwiperSlider key={index}>
+            //   <ThumbImage src={slide.image} alt="gallary" />
+            // </MySwiperSlider>
           )
         })}
       </MySwiperMain>
@@ -95,13 +128,22 @@ const SwiperSlider = () => {
       >
         {GallaryImage.map((slide, index) => {
           return (
-            <MyThumbSlider key={'_' + index}>
+            <SwiperSlide 
+              style={MyThumbSlider}
+              key={'_' + index}>
               <img
                 src={slide.image}
                 alt="gallary"
                 style={{ margin: '5vw 0' }}
               />
-            </MyThumbSlider>
+            </SwiperSlide>
+            // <MyThumbSlider key={'_' + index}>
+            //   <img
+            //     src={slide.image}
+            //     alt="gallary"
+            //     style={{ margin: '5vw 0' }}
+            //   />
+            // </MyThumbSlider>
           )
         })}
       </Swiper>
