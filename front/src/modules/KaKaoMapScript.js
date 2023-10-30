@@ -8,24 +8,41 @@ let map;
 export default function KakaoMapScript(lat,lng) {
     lat = lat;
     lng = lng;
-    const container = document.getElementById('map');
-    container.innerHTML = '';
+    var staticMapContainer  = document.getElementById('map'), // 이미지 지도를 표시할 div 
+		    staticMapOption = {
+		        center: new kakao.maps.LatLng(lat, lng), // 이미지 지도의 중심 좌표
+		        level: 3, // 이미지 지도의 확대 레벨
+		        mapTypeId : kakao.maps.MapTypeId.ROADMAP, // 지도종류
+                //set Marker
+                marker : {
+		        	 // 좌표가 없으면 지도 중심에 마커가 표시된다
+		        },
+		    };
+
+		// 이미지 지도를 생성한다
+    map = new kakao.maps.StaticMap(staticMapContainer, staticMapOption);
+//     const container = document.getElementById('map');
+//     container.innerHTML = '';
 
     //set Marker
-    const markerPosition = new kakao.maps.LatLng(lat, lng);
-    const marker = new kakao.maps.Marker({
-        position: markerPosition
-    });
-    const options = {
-        center: new kakao.maps.LatLng(lat, lng),
-        level: 4,
-    };
-   map = new kakao.maps.Map(container, options);
+        // const markerPosition = new kakao.maps.LatLng(lat, lng);
+        // const marker = new kakao.maps.Marker({
+        //     position: markerPosition
+        // });
+//     const markerPosition = new kakao.maps.LatLng(lat, lng);
+//     const marker = new kakao.maps.Marker({
+//         position: markerPosition
+//     });
+//     const options = {
+//         center: new kakao.maps.LatLng(lat, lng),
+//         level: 4,
+//     };
+//    map = new kakao.maps.Map(container, options);
 
-    marker.setMap(map);
-    // 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
-    const zoomControl = new kakao.maps.ZoomControl();
-    map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+    // marker.setMap(map);
+//     // 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+//     const zoomControl = new kakao.maps.ZoomControl();
+//     map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
 }
 export  function panTo(lat,lng) {
