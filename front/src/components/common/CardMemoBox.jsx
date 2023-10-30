@@ -4,14 +4,14 @@ const CardMemoBoxBlock = styled.div`
   text-align: center;
   padding: 5vw 0;
   line-height: 2;
-  border: 1px solid green;
-  margin: 4vw;
+  border: 1px solid #c6cac6;
+  margin: 10vw 8vw 0 8vw;
   border-radius: 2vw;
   position: relative;
 `
 const MemoTitle = styled.div`
   span {
-    background: #e2f0d9;
+    background: #dce5dc;
     display: inline-block;
     border-radius: 2vw;
     font-size: 4vw;

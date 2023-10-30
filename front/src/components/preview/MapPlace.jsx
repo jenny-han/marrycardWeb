@@ -96,12 +96,19 @@ const MapPlace = () => {
         placeId={placeId}
       ></MapLocation>
       {/* <Divider variant="middle" /> */}
-      <CardMemoBox title="대절버스안내">
-        <div>
-          오전 11시30분 출발 <br />
+      <CardMemoBox title=" 대절버스안내 ">
+        <div style={{ padding: '4vw 0 2vw 0' }}>
+          🚍 오전 11시30분 출발 <br />
           삼성동 119안전센터 ( 구 대전 중부소방서 ) <br />
-          오후 12시(정오) 출발 <br />
-          유성차량등록사업소 앞
+          |
+          <br />
+          🚍 오후 12시(정오) 출발 <br />
+          유성차량등록사업소 앞<br />
+          |
+          <br />
+          💒 웨딩홀 도착 <br />
+          라온제나 분당
+          <br />
         </div>
       </CardMemoBox>
       {/* <Divider variant="middle" /> */}
