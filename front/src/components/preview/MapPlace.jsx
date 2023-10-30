@@ -1,16 +1,24 @@
 import styled from 'styled-components'
-import CardTitleText from '../common/CardTitleText'
+
 import ContentCopyIcon from '@mui/icons-material/ContentCopy'
-import traffic from '../../lib/img/traffic.png'
 import { copyDoc } from '../../modules/copy'
 import { Divider } from '@mui/material'
 
 import MapLocation from '../../containers/appView/MapLocation'
 import MapTransport from '../common/MapTransport'
+import CardTitleText from '../common/CardTitleText'
+
+import traffic from '../../lib/img/traffic.png'
+import CardMemoBox from '../common/CardMemoBox'
 
 const MapPlaceBlock = styled.div`
   text-align: center;
-  padding-top: 4vw;
+  padding: 8vw 0 10vw 0;
+  background-color: #f7f6f4;
+  font-family: 'JeonjuCraftGoR';
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 `
 const MapInfoBox = styled.div``
 const LocationInfo = styled.div`
@@ -27,6 +35,9 @@ const LocationAddr = styled.div`
   color: #555;
   line-height: 1.7;
   text-align: center;
+  span {
+    font-size: 3vw;
+  }
 `
 const CopyImg = styled(ContentCopyIcon)`
   position: relative;
@@ -74,7 +85,7 @@ const MapPlace = () => {
             {addr}
             <CopyImg onClick={doCopyAddr} />
             <br />
-            (야탑동 366-1) / (판교역 5분, 판교 IC 7분)
+            <span>(야탑동 366-1) / (판교역 5분, 판교 IC 7분)</span>
           </LocationAddr>
         </LocationInfo>
       </MapInfoBox>
@@ -84,7 +95,16 @@ const MapPlace = () => {
         name={name}
         placeId={placeId}
       ></MapLocation>
-      <Divider variant="middle" />
+      {/* <Divider variant="middle" /> */}
+      <CardMemoBox title="대절버스안내">
+        <div>
+          오전 11시30분 출발 <br />
+          삼성동 119안전센터 ( 구 대전 중부소방서 ) <br />
+          오후 12시(정오) 출발 <br />
+          유성차량등록사업소 앞
+        </div>
+      </CardMemoBox>
+      {/* <Divider variant="middle" /> */}
       <MapTransport>
         <MapTitle>주차안내</MapTitle>
         <p>

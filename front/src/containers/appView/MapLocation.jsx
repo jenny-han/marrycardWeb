@@ -34,8 +34,7 @@ const SetCenterBtn = styled.div`
 const MapDetailLink = styled.div`
   font-size: 3.8vw;
   padding: 4vw 0;
-  background-color: #ece1d5;
-  font-family: 'JeonjuCraftGoR';
+  background-color: #ecebdb;
 `
 const MapBtnBox = styled.div`
   margin-top: 2vw;

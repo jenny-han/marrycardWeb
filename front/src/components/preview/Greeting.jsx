@@ -9,7 +9,6 @@ const GreetingBlock = styled.div`
 `
 
 const CoupleBoxGroup = styled.div`
-  font-size: 0;
   max-width: 250vw;
   margin-top: 5vw;
   // transition: 2s all;

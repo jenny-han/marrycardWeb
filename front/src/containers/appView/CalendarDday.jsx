@@ -5,11 +5,10 @@ const CalendarDdayDiv = styled.div`
   font-size: 4vw;
   font-weight: 500;
   letter-spacing: -0.25vw;
-  font-family: 'KyoboHand';
+  // font-family: 'KyoboHand';
   background: #fcfaf2;
   margin-top: 4vw;
   padding: 3vw;
-  //   width: 100%;
   color: black;
 `
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import flower from '../../lib/img/flower.png'
+import icon from '../../lib/img/christmas-ball.png'
 import CardTitleText from '../common/CardTitleText'
 import SwiperSlider from '../../containers/appView/SwiperSlider'
 
@@ -20,7 +20,7 @@ const PhotoGallery = () => {
   return (
     <PhotoGalleryBlock>
       <TitleBoxWithImg>
-        <img src={flower} alt="flower"></img>
+        <img src={icon} alt="icon"></img>
         <CardTitleText text="갤러리" />
       </TitleBoxWithImg>
       <PhotoZone>

@@ -7,7 +7,7 @@ const InviteMsg = styled.div`
   padding: 5vw 0;
   letter-spacing: 3px;
   text-align: center;
-  font-family: 'KyoboHand';
+  font-family: 'JeonjuCraftGoR';
 `
 
 const CardTitleText = (props) => {

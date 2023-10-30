@@ -13,13 +13,13 @@ const NewMemo = styled.div`
   padding: 3vw 3vw;
   border: #ece1d5;
   border-radius: 3vw;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   font-size: 3.8vw;
-  margin:2vw 0 ;
+  margin: 2vw 0;
 `
 
 const FormBlock = styled.div`
-  margin : 2vw;
+  margin: 2vw;
   width: 90%;
   height: 50vw;
   font-size: 3vw;
@@ -28,7 +28,7 @@ const FormBlock = styled.div`
   pointer-events: auto;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid rgba(0,0,0,.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
   outline: 0;
 `
@@ -37,11 +37,11 @@ const InputWrap = styled.div`
   display: inline-flex;
   justify-content: space-around;
   width: 100%;
-  margin-top: 2vw;  
+  margin-top: 2vw;
 `
 
 const MyInput = styled.input`
-  width:45%;
+  width: 45%;
   padding: 2vw;
   margin-left: 2vw;
   font-size: 3.5vw;
@@ -57,18 +57,19 @@ const TextArea = styled.textarea`
   color: #222;
   font-weight: 400;
   padding: 3vw 5vw 0;
+  resize: none;
 `
 
 const SubmitButton = styled.button`
-  width:30%;
+  width: 30%;
   border-radius: 2vw;
   box-sizing: border-box;
   font-size: 3vw;
   color: #fff;
   background-color: #725442;
   border: 1px solid #725442;
-  padding:2vw;
-  margin : 3vw 0;
+  padding: 2vw;
+  margin: 3vw 0;
   cursor: pointer;
 `
 
@@ -79,37 +80,31 @@ export const Edit = ({
   onChangeAuthor,
   onChangePassword,
   onChangeContents,
-  handleSubmit
+  handleSubmit,
 }) => {
-
   return (
     <EditBlock>
       <NewMemo onClick={onEditClick}>
-          { 
-            isEdit ? 
-            "축하메세지 작성 취소" : 
-            "축하메세지 작성하기" 
-          }
+        {isEdit ? '축하메세지 작성 취소' : '축하메세지 작성하기'}
       </NewMemo>
-      {
-        isEdit &&
+      {isEdit && (
         <FormBlock>
           <form onSubmit={handleSubmit}>
             <InputWrap>
               <MyInput
-                style={{'borderBottom': '1px solid #ddd'}}
+                style={{ borderBottom: '1px solid #ddd' }}
                 type="text"
                 name="author"
-                placeholder='이름(10자 이내)'
+                placeholder="이름(10자 이내)"
                 maxLength={10}
                 value={inputs.name}
                 onChange={onChangeAuthor}
               />
               <MyInput
-                style={{'borderBottom': '1px solid #ddd'}}
+                style={{ borderBottom: '1px solid #ddd' }}
                 type="password"
                 name="password"
-                placeholder='비밀번호(15자 이내)'
+                placeholder="비밀번호(15자 이내)"
                 value={inputs.password}
                 maxLength={15}
                 onChange={onChangePassword}
@@ -126,12 +121,10 @@ export const Edit = ({
               />
               <span>{inputs.contents.length} / 100</span>
             </div>
-            <SubmitButton type="submit">
-              메세지 남기기
-            </SubmitButton>
+            <SubmitButton type="submit">메세지 남기기</SubmitButton>
           </form>
         </FormBlock>
-      }
+      )}
     </EditBlock>
-  );
+  )
 }

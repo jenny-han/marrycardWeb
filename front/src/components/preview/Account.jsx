@@ -7,14 +7,15 @@ const AccountBlock = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  // font-family: 'JeonjuCraftGoR';
+  font-family: 'JeonjuCraftGoR';
+  padding: 3vw 0 13vw 0;
 `
 
 const TitleBoxWithMsg = styled.div`
   margin-bottom: 5vw;
 `
 const MsgBox = styled.div`
-  font-size: 1.5em;
+  font-size: 3.8vw;
 `
 
 const Account = () => {

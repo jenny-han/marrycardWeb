@@ -5,10 +5,11 @@ import { copyDoc } from '../../modules/copy.js'
 const ToggleBlock = styled.div`
   padding: 4vw 3vw;
   border-bottom: 1px dashed;
+  font-size: 0.9em;
 `
 const AccountInfo = styled.div`
   position: relative;
-  font-size: 3.2vw;
+  font-size: 1em;
   color: #000;
   font-weight: 500;
   margin-bottom: 4vw;
@@ -27,7 +28,7 @@ const AccountInfo = styled.div`
   em {
     font-weight: 300;
     font-style: normal;
-    font-size: 3.5vw;
+    font-size: 0.9em;
     position: relative;
     margin-left: 1.5vw;
     letter-spacing: -0.02em;
@@ -36,9 +37,9 @@ const AccountInfo = styled.div`
 const AccountName = styled.div`
   font-weight: 300;
   color: #000;
-  font-size: 3.2vw;
+  font-size: 0.8em;
   em {
-    font-size: 3.5vw;
+    font-size: 1.2em;
     font-style: normal;
   }
 `
@@ -68,7 +69,7 @@ const AccountToggle = (props) => {
   let data = props.togdata
 
   const doCopyAccount = () => {
-    let copytxt = props.bank + ' ' + props.number
+    let copytxt = bank + ' ' + number
     copyDoc('계좌', copytxt)
   }
   return (
