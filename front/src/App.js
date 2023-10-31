@@ -5,12 +5,13 @@ import Layout from './layout/Layout'
 import CardLayout from './layout/CardLayout'
 import EditorPage from './pages/EditorPage'
 import AppViewPage from './pages/AppViewPage'
+import HomePage from './pages/HomePage'
 
 function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route path="/" element={<SamplePage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/editor" element={<EditorPage />} />
       </Route>
       <Route element={<CardLayout />}>

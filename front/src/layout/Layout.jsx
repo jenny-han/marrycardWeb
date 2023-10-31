@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
-
+import logo from '../lib/img/favicon.png'
 const Layout = () => {
   return (
     <div>
@@ -13,7 +13,9 @@ const Layout = () => {
         }}
       >
         <span style={{ fontFamily: 'Gruppo' }}>
-          <Link to="/">CH. WEDDING</Link>
+          <Link to="/">
+            <img src={logo} style={{ width: '30px' }} />
+          </Link>
         </span>
       </header>
       <main>
