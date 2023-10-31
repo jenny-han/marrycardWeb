@@ -14,7 +14,7 @@ export const sendMessage = () => {
         content: {
           title: '준연♥혜수 결혼합니다',
           description: '2023. 12. 09 (토) 오후 03시 30분, 야탑역 라온제나 분당 8층 플로렌스홀',
-          imageUrl:'https://k.kakaocdn.net/dn/lILdz/btszlwQ8EYB/PFMEhKlSPSJNkVSD5s5aPK/kakaolink40_original.jpg',
+          imageUrl:'https://k.kakaocdn.net/dn/mt6L0/btszy41yBft/lkDGomdCChdRGUQRYyPvq0/kakaolink40_original.jpg',
           link: { 
             mobileWebUrl: 'http://ch-wedding.kr/card/jyhs1209',
              webUrl: 'http://ch-wedding.kr/card/jyhs1209',
