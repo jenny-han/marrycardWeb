@@ -30,6 +30,10 @@ public class SampleService {
     return guestBookRepository.findAll();
   }
 
+  public Long getCountGuestBooks(int cardId) {
+    return guestBookRepository.countByCardId(cardId);
+  }
+
   public Page<GuestBook> findByCardId(int cardId, int pageNumber, int pageSize) {
     return guestBookRepository.findByCardId(cardId, PageRequest.of(pageNumber, pageSize));
   }

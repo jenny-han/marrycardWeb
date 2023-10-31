@@ -41,6 +41,13 @@ public class SampleController {
     return sampleService.getGuestbookList();
   }
 
+  @Operation(summary = "방명록샘플갯수조회", description = "guest book sample search")
+  @GetMapping("/guestbooks/count")
+  public Long getCountGuestBooks(
+      @RequestParam int cardId) {
+    return sampleService.getCountGuestBooks(cardId);
+  }
+
   @Operation(summary = "방명록샘플처음조회", description = "guest book sample search")
   @GetMapping("/guestbooks/page")
   public List<GuestBook> getFirstGuestBooks(
