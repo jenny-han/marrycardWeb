@@ -22,7 +22,8 @@ const TitleBoxWithImg = styled.div`
 
 const GuestBook = () => {
   const [guestBookList, setGuestBookList] = useState([])
-  const [lastId, setlastId] = useState(0)
+  const [count, setCount] = useState(0)
+  const [lastId, setLastId] = useState(0)
   const [isMore, setIsMore] = useState(false)
 
   const cardId = 1
@@ -30,41 +31,52 @@ const GuestBook = () => {
 
   const onClickMoreItem = () => {
     if (isMore) {
-      setlastId(guestBookList[guestBookList.length - 1].id)
+      loadGuestBookList()
     } else {
-      setlastId(0)
+      initGuestBookList()
     }
   }
 
-  const loadGuestBookList = useCallback(() => {
-      let apiAddr = ''
-      let params = {}
-      if (lastId === 0) {
-        apiAddr = `api/sample/guestbooks/page`
-        params = { cardId, pageNumber: 0, pageSize: PAGE_SIZE }
-      } else {
-        apiAddr = `api/sample/guestbooks/page/lastId`
-        params = { cardId, lastId, pageSize: PAGE_SIZE }
-      }
-
+  const initGuestBookList = useCallback(() => {
       axiosInstance
-        .get(apiAddr, { params })
+        .get(`api/sample/guestbooks/count`, { params: { cardId } })
+        .then((resCnt) => {
+          setCount(resCnt.data)
+          axiosInstance
+            .get(`api/sample/guestbooks/page`, { params: { cardId, pageNumber: 0, pageSize: PAGE_SIZE } })
+            .then((res) => {
+              if (Array.isArray(res.data)) {
+                const list = res.data
+                setGuestBookList(list)
+                setLastId(list[list.length - 1].id)
+              } else 
+                setGuestBookList([])
+            })
+            .catch((err) => console.log(err))
+        })
+        .catch((err) => console.log(err))
+    }, [])
+
+  const loadGuestBookList = useCallback(() => {
+      axiosInstance
+        .get(`api/sample/guestbooks/page/lastId`, { params: { cardId, lastId, pageSize: PAGE_SIZE } })
         .then((res) => {
           if (Array.isArray(res.data)) {
             const list = res.data
-            setIsMore(list.length === PAGE_SIZE)
-            if (lastId === 0) {
-              setGuestBookList(list)
-            } else {
-              setGuestBookList((prev) => [...prev, ...list])
-            }
-          } else setGuestBookList([])
+            setGuestBookList((prev) => [...prev, ...list])
+            setLastId(list[list.length - 1].id)
+          } else 
+            setGuestBookList([])
         })
         .catch((err) => console.log(err))
     }, [lastId]) 
 
   useEffect(() => {
-    loadGuestBookList()
+    setIsMore(count > guestBookList.length)
+  }, [count, guestBookList])
+
+  useEffect(() => {
+    initGuestBookList()
   }, [])
 
   return (
@@ -74,7 +86,7 @@ const GuestBook = () => {
         <CardTitleText text="축하메세지" />
       </TitleBoxWithImg>
 
-      <GuestBookEdit loadList={loadGuestBookList} />
+      <GuestBookEdit loadList={initGuestBookList} />
 
       {guestBookList.length === 0 && <Empty />}
 
@@ -83,16 +95,19 @@ const GuestBook = () => {
           <GuestBookItem
             key={item.id}
             data={item}
-            loadList={loadGuestBookList}
+            loadList={initGuestBookList}
           />
         )
       })}
 
-      <MoreBtn
-        message={isMore ? '더보기' : '축하메세지 접기'}
-        isMore={isMore}
-        onClick={onClickMoreItem}
-      />
+      {
+        count > 3 &&
+        <MoreBtn
+          message={isMore ? '더보기' : '축하메세지 접기'}
+          isMore={isMore}
+          onClick={onClickMoreItem}
+        />
+      }
     </GuestBookBlock>
   )
 }
