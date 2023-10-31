@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import styled from 'styled-components'
 
 import { Empty, MoreBtn } from '../../../components/preview/guestBook'
@@ -36,8 +36,7 @@ const GuestBook = () => {
     }
   }
 
-  useEffect(() => {
-    const loadGuestBookList = () => {
+  const loadGuestBookList = useCallback(() => {
       let apiAddr = ''
       let params = {}
       if (lastId === 0) {
@@ -62,10 +61,11 @@ const GuestBook = () => {
           } else setGuestBookList([])
         })
         .catch((err) => console.log(err))
-    }
+    }, [lastId]) 
 
+  useEffect(() => {
     loadGuestBookList()
-  }, [lastId])
+  }, [])
 
   return (
     <GuestBookBlock>
@@ -74,7 +74,7 @@ const GuestBook = () => {
         <CardTitleText text="축하메세지" />
       </TitleBoxWithImg>
 
-      <GuestBookEdit loadList={() => setlastId(0)} />
+      <GuestBookEdit loadList={loadGuestBookList} />
 
       {guestBookList.length === 0 && <Empty />}
 
@@ -83,7 +83,7 @@ const GuestBook = () => {
           <GuestBookItem
             key={item.id}
             data={item}
-            loadList={() => setlastId(0)}
+            loadList={loadGuestBookList}
           />
         )
       })}
