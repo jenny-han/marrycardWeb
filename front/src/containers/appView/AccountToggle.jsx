@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { copyDoc } from '../../modules/copy.js'
 
 const ToggleBlock = styled.div`
-  padding: 4vw 3vw;
+  padding: 20px 15px;
   border-bottom: 1px dashed;
   font-size: 0.9em;
 `
@@ -12,7 +12,7 @@ const AccountInfo = styled.div`
   font-size: 1em;
   color: #000;
   font-weight: 500;
-  margin-bottom: 4vw;
+  margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -30,7 +30,7 @@ const AccountInfo = styled.div`
     font-style: normal;
     font-size: 0.9em;
     position: relative;
-    margin-left: 1.5vw;
+    margin-left: 7px;
     letter-spacing: -0.02em;
   }
 `
@@ -49,14 +49,13 @@ const AccountBtn = styled.div`
   text-align: center;
 `
 const BankCopyBtn = styled.button`
-  font-family: 'KyoboHand';
   width: 50%;
-  border-radius: 2vw;
-  margin-top: 2vw;
+  border-radius: 10px;
+  margin-top: 20px;
   text-align: center;
   background: #fff;
-  font-size: 3vw;
-  padding: 3vw;
+  font-size: 1em;
+  padding: 10px;
   color: #222;
   font-weight: 500;
   border: none;

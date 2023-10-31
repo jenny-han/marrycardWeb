@@ -7,15 +7,15 @@ import FavoriteIcon from '@mui/icons-material/Favorite'
 
 const AccountBoxBlock = styled.div`
   border: 1px solid;
-  margin-bottom: 5vw;
+  margin-bottom: 20px;
   width: 80%;
   font-size: 1.2em;
 `
 const BoxTitle = styled.div`
-  padding: 0 0 1vw 5vw;
+  padding: 0 0 5px 15px;
   position: relative;
   cursor: pointer;
-  height: 10vw;
+  height: 50px;
   background: #e6e7dd;
   box-sizing: border-box;
   display: -webkit-box;
@@ -28,14 +28,14 @@ const BoxTitle = styled.div`
   align-items: center;
 
   span {
-    padding-left: 2vw;
+    padding-left: 15px;
     line-height: 1.5;
-    font-size: 3.6vw;
+    font-size: 1em;
   }
 `
 const ArrowImg = styled(ExpandMoreIcon)`
   position: absolute;
-  right: 3vw;
+  right: 20px;
   top: 50%;
   margin-top: -0.5em;
 `

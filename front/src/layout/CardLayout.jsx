@@ -4,7 +4,7 @@ import logo from '../lib/img/logo2.png'
 const CardLayout = () => {
   return (
     <div>
-      <main>
+      <main style={{ maxWidth: '500px', margin: 'auto' }}>
         <Outlet />
       </main>
       <footer

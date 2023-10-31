@@ -5,22 +5,22 @@ import ContactFamilyBox from '../../containers/appView/ContactFamilyBox'
 const GreetingBlock = styled.div`
   background-color: rgb(77 63 56);
   text-align: center;
-  padding: 5vw 0;
+  padding: 30px 0;
 `
 
 const CoupleBoxGroup = styled.div`
-  max-width: 250vw;
-  margin-top: 5vw;
+  max-width: 600px;
+  margin-top: 30px;
   // transition: 2s all;
   // transition-delay: 500ms;
 `
 const FamilyBoxGroup = styled.div``
 
 const SubTitle = styled.p`
-  margin-top: 10vw;
-  margin-bottom: 7vw;
+  margin: 50px 0;
+  // margin-bottom: ;
   color: white;
-  font-size: 4vw;
+  font-size: 1.3em;
   line-height: 1.4;
   letter-spacing: -0.05em;
 `

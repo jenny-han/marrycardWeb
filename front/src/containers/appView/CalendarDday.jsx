@@ -2,13 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 
 const CalendarDdayDiv = styled.div`
-  font-size: 4vw;
+  font-size: 1em;
   font-weight: 500;
-  letter-spacing: -0.25vw;
-  // font-family: 'KyoboHand';
+  letter-spacing: -0.25px;
   background: #fcfaf2;
-  margin-top: 4vw;
-  padding: 3vw;
+  margin-top: 40px;
+  padding: 15px;
   color: black;
 `
 

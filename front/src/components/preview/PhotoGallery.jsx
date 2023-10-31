@@ -4,7 +4,7 @@ import CardTitleText from '../common/CardTitleText'
 import SwiperSlider from '../../containers/appView/SwiperSlider'
 
 const PhotoGalleryBlock = styled.div`
-  padding: 10vw 0;
+  padding: 50px 0;
   text-align: center;
 `
 const TitleBoxWithImg = styled.div`
@@ -13,7 +13,7 @@ const TitleBoxWithImg = styled.div`
   }
 `
 const PhotoZone = styled.div`
-  margin: 4vw 2vw;
+  margin: 30px 20px;
 `
 
 const PhotoGallery = () => {

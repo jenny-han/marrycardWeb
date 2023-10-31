@@ -2,19 +2,19 @@ import styled from 'styled-components'
 
 const CardMemoBoxBlock = styled.div`
   text-align: center;
-  padding: 5vw 0;
+  padding: 10px 0;
   line-height: 2;
   border: 1px solid #c6cac6;
-  margin: 10vw 8vw 0 8vw;
-  border-radius: 2vw;
+  margin: 50px 30px 0;
+  border-radius: 20px;
   position: relative;
 `
 const MemoTitle = styled.div`
   span {
     background: #dce5dc;
     display: inline-block;
-    border-radius: 2vw;
-    font-size: 4vw;
+    border-radius: 20px;
+    font-size: 1.3em;
     margin: 0 auto;
     padding: 0 24px;
   }

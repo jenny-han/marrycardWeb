@@ -5,31 +5,33 @@ const EditBlock = styled.div`
 `
 
 const NewMemo = styled.div`
+  font-family: 'Noto Sans KR', sans-serif;
   background-color: #ece1d5;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 45%;
-  padding: 3vw 3vw;
+  padding: 10px;
   border: #ece1d5;
-  border-radius: 3vw;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-size: 3.8vw;
-  margin: 2vw 0;
+  border-radius: 10px;
+  font-size: 1.2em;
+  margin: 20px 0;
 `
 
 const FormBlock = styled.div`
-  margin: 2vw;
+  margin: 10px;
   width: 90%;
-  height: 50vw;
-  font-size: 3vw;
+  height: 260px;
+  font-size: 1em;
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   pointer-events: auto;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
+  border-radius: 5px;
   outline: 0;
 `
 
@@ -37,39 +39,39 @@ const InputWrap = styled.div`
   display: inline-flex;
   justify-content: space-around;
   width: 100%;
-  margin-top: 2vw;
+  margin-top: 10px;
 `
 
 const MyInput = styled.input`
   width: 45%;
-  padding: 2vw;
-  margin-left: 2vw;
-  font-size: 3.5vw;
+  padding: 10px;
+  margin-left: 10px;
+  font-size: 1em;
   border: 0;
 `
 
 const TextArea = styled.textarea`
-  height: 20vw;
+  height: 110px;
   border: none;
   box-sizing: border-box;
-  font-size: 3.5vw;
+  font-size: 1.4em;
   width: 100%;
   color: #222;
   font-weight: 400;
-  padding: 3vw 5vw 0;
+  padding: 20px 25px 0;
   resize: none;
 `
 
 const SubmitButton = styled.button`
-  width: 30%;
-  border-radius: 2vw;
+  width: 40%;
+  border-radius: 10px;
   box-sizing: border-box;
-  font-size: 3vw;
+  font-size: 1em;
   color: #fff;
   background-color: #725442;
   border: 1px solid #725442;
-  padding: 2vw;
-  margin: 3vw 0;
+  padding: 10px 20px;
+  margin: 10px 0;
   cursor: pointer;
 `
 

@@ -8,14 +8,14 @@ const AccountBlock = styled.div`
   flex-direction: column;
   align-items: center;
   font-family: 'JeonjuCraftGoR';
-  padding: 3vw 0 13vw 0;
+  padding: 10px 0 80px 0;
 `
 
 const TitleBoxWithMsg = styled.div`
-  margin-bottom: 5vw;
+  margin-bottom: 40px;
 `
 const MsgBox = styled.div`
-  font-size: 3.8vw;
+  font-size: 1.1em;
 `
 
 const Account = () => {

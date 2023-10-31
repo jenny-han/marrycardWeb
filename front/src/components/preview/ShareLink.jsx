@@ -9,11 +9,11 @@ import link from '../../lib/img/link-lightbrown.png'
 
 const ShareLinkBlock = styled.div`
   text-align: center;
-  padding: 7vw 2vw;
+  padding: 40px 10px 80px;
 `
 const ShareBox = styled.div`
-  margin-top: 5vw;
-  width: 35%;
+  margin-top: 30px;
+  width: 30%;
   display: inline-flex;
   align-items: center;
   justify-content: space-between;

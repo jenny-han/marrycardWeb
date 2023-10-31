@@ -10,12 +10,12 @@ const SingleBox = styled.div`
   vertical-align: top;
   position: relative;
   width: 50%;
-  padding: 0 5vw;
+  padding: 0 25px;
   box-sizing: border-box;
 `
 
 const CircleImgBox = styled.div`
-  margin-bottom: 4vw;
+  margin-bottom: 20px;
   position: relative;
 
   a {
@@ -39,19 +39,19 @@ const CircleImgBox = styled.div`
   }
 `
 const NameStrong = styled.strong`
-  font-size: 4vw;
+  font-size: 1.6em;
   color: #fff;
   font-weight: 400;
   display: block;
-  margin-bottom: 5vw;
+  margin-bottom: 30px;
 `
 
 const ContactName = styled.div`
   a {
-    height: 9vw;
+    height: 45px;
     box-sizing: border-box;
     border: 1px solid #796453;
-    border-radius: 2vw;
+    border-radius: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -69,15 +69,15 @@ const ContactName = styled.div`
     position: relative;
     font-weight: 500;
     color: #f7f0e8;
-    font-size: 3.5vw;
-    padding-left: 2vw;
+    font-size: 1.2em;
+    padding-left: 10px;
   }
 `
 const ContactImgBox = styled.div`
   //   background-repeat: no-repeat;
   background-size: cover;
-  width: 3vw;
-  height: 3vw;
+  width: 18px;
+  height: 18px;
 `
 
 const ContactCoupleBox = (props) => {

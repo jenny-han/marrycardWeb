@@ -6,24 +6,19 @@ import ImageBox from '../common/ImageBox'
 // import mainText from '../../lib/img/maintext.png'
 const MainCoverBlock = styled.div`
   margin: 0;
-  // padding: 5vw 0;
 `
 const InfoBox = styled.div`
   width: 100%;
   font-size: 1.4em;
   text-align: center;
   // text-shadow: -1px 0px white, 0px 1px white, 1px 0px white, 0px -1px white;
-  top: 15vw;
+  top: 15px;
   // background-color: #ffffff;
   // position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-`
-const InfoBoxTest = styled(InfoBox)`
-  // position: relative;
-  // top:200
 `
 const MainInfo = styled.div`
   font-size: 1.4em;
@@ -64,7 +59,8 @@ const MainCover = () => {
   return (
     <MainCoverBlock>
       <ImageBox imgUrl={mainImg} alt="main_text" width="100%" />
-      {/* <InfoBoxTest>
+      {/* 사진 위 폰트
+      <InfoBox>
         <MainTextTest> 23 | 12 | 09 </MainTextTest>
         <MainInfo>
           김준연 <span style={{ fontSize: '.7em' }}>♥︎</span> 양혜수
@@ -72,11 +68,12 @@ const MainCover = () => {
         <div>2023. 12. 09 (토) 오후 03시 30분</div>
         <div>라온제나 분당 8층 플로렌스홀 </div>
         <ImageCard src={mainImg} alt="main_img" />
-      </InfoBoxTest> */}
+      </InfoBox> */}
       {/* <InfoBox> */}
       {/* <ImageBox imgUrl={mainText} alt="main_text" width="100%" /> */}
 
-      {/* <MainText> 어느 겨울날❄️, 결혼합니다 ❤️ </MainText>
+      {/* 액자형 
+      <MainText> 어느 겨울날❄️, 결혼합니다 ❤️ </MainText>
         <MainInfo>
           김준연 <span style={{ fontSize: '.7em' }}>그리고</span> 양혜수
         </MainInfo> */}

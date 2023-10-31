@@ -11,7 +11,7 @@ import styled from 'styled-components'
 import ReplayIcon from '@mui/icons-material/Replay'
 const Map = styled.div`
   width: 100%;
-  height: 70vw;
+  height: 300px;
 `
 const SetCenterBtn = styled.div`
   width: 6vw;
@@ -32,38 +32,38 @@ const SetCenterBtn = styled.div`
   }
 `
 const MapDetailLink = styled.div`
-  font-size: 3.8vw;
-  padding: 4vw 0;
+  font-size: 1.2em;
+  padding: 15px 0;
   background-color: #ecebdb;
 `
 const MapBtnBox = styled.div`
-  margin-top: 2vw;
-  padding: 5vw 2vw 2vw;
+  margin-top: 10px;
+  padding: 30px 5px 5px;
 `
 const NaviBtnBox = styled.div`
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 45%;
-  padding: 2vw;
+  padding: 10px;
   background-color: #fff;
   border: #faf6f2;
-  border-radius: 2vw;
-  margin: 2vw;
+  border-radius: 10px;
+  margin: 10px;
   //   font-family: 'Noto Sans KR', sans-serif;
-  font-size: 4vw;
+  font-size: 1.2em;
   img {
-    border-radius: 1vw;
+    border-radius: 5px;
     border: 1px solid #fff;
-    width: 5vw;
-    margin-right: 2vw;
+    width: 26px;
+    margin-right: 15px;
   }
 `
 const HowtoGoH3 = styled.h3`
-  margin-bottom: 3vw;
+  margin-bottom: 20px;
   //   font-family: 'Nanum Myeongjo', serif;
   font-weight: 700;
-  font-size: 4.5vw;
+  font-size: 1.5em;
 `
 const MapLocation = (props) => {
   const { lat, lng, name, placeId } = props

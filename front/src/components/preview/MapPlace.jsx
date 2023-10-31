@@ -12,55 +12,55 @@ import traffic from '../../lib/img/traffic.png'
 import CardMemoBox from '../common/CardMemoBox'
 
 const MapPlaceBlock = styled.div`
-  text-align: center;
-  padding: 8vw 0 10vw 0;
-  background-color: #f7f6f4;
   font-family: 'JeonjuCraftGoR';
+  text-align: center;
+  padding: 80px 0 50px 0;
+  background-color: #f7f6f4;
   display: flex;
   justify-content: center;
   flex-direction: column;
 `
 const MapInfoBox = styled.div``
 const LocationInfo = styled.div`
-  padding: 4vw 0;
+  padding: 20px 0;
 `
 const LocationTitle = styled.div`
-  padding: 2vw 0;
-  font-size: 4.8vw;
+  padding: 10px 0;
+  font-size: 1.5em;
   letter-spacing: -1px;
   font-weight: 600;
 `
 const LocationAddr = styled.div`
-  font-size: 4vw;
+  font-size: 1.2em;
   color: #555;
   line-height: 1.7;
   text-align: center;
   span {
-    font-size: 3vw;
+    font-size: 0.9em;
   }
 `
 const CopyImg = styled(ContentCopyIcon)`
   position: relative;
-  margin-left: 2vw;
-  margin-top: 1vw;
+  margin-left: 10px;
+  margin-top: 10px;
 `
 const ImgIcon = styled.img`
-  width: 120px;
+  width: 100px;
 `
 const MapTitle = styled.div`
-  margin: 5vw;
-  //   font-family: 'Nanum Myeongjo', serif;
+  margin: 10px;
+  // font-family: 'Nanum Myeongjo', serif;
   font-weight: 700;
-  font-size: 4.5vw;
+  font-size: 1.5em;
 `
 const SubwayBtn = styled.span`
-  padding: 1.5vw;
-  border-radius: 5vw;
+  padding: 5px;
+  border-radius: 60px;
   background-color: #fff;
   color: rgb(241, 201, 64);
   font-size: 0.9em;
   font-weight: 700;
-  border: 0.5vw solid;
+  border: 2px solid;
 `
 
 const MapPlace = () => {
@@ -97,7 +97,7 @@ const MapPlace = () => {
       ></MapLocation>
       {/* <Divider variant="middle" /> */}
       <CardMemoBox title=" 대절버스안내 ">
-        <div style={{ padding: '4vw 0 2vw 0' }}>
+        <div style={{ padding: '40px 0 10px 0' }}>
           🚍 오전 11시30분 출발 <br />
           삼성동 119안전센터 ( 구 대전 중부소방서 ) <br />
           |

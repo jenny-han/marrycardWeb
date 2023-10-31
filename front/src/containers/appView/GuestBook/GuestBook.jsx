@@ -11,19 +11,9 @@ import icon from '../../../lib/img/bells.png'
 
 const GuestBookBlock = styled.div`
   text-align: center;
-  padding: 10vw 0;
+  padding: 50px 0;
 `
-const GuestBookTitle = styled.div`
-  text-align: center;
-  font-weight: bolder;
-  position: relative;
-  margin: 5vw 0;
-  transform: translate(50%);
-  width: 50%;
-  font-size: 4.5vw;
-  color: #805338;
-  letter-spacing: 1vw;
-`
+
 const TitleBoxWithImg = styled.div`
   img {
     width: 50px;
@@ -79,9 +69,6 @@ const GuestBook = () => {
 
   return (
     <GuestBookBlock>
-      {/* <GuestBookTitle>
-                축하메세지
-            </GuestBookTitle> */}
       <TitleBoxWithImg>
         <img src={icon} alt="flower"></img>
         <CardTitleText text="축하메세지" />
