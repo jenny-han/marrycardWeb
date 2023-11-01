@@ -9,6 +9,7 @@ import MapPlace from '../../components/preview/MapPlace'
 // import GuestBook from '../../components/preview/GuestBook'
 import ShareLink from '../../components/preview/ShareLink'
 
+import CheckAttendance from '../../containers/appView/CheckAttendance'
 import GuestBook from '../../containers/appView/GuestBook/GuestBook'
 
 import ImageBox from '../../components/common/ImageBox'
@@ -38,7 +39,7 @@ const AppViewContainer = () => {
       <MapPlace />
 
       {/* 참석여부 전달 */}
-      {/* <CheckAttendance /> */}
+      <CheckAttendance />
 
       {/* 방명록. */}
       <GuestBook />
