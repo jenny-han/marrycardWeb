@@ -26,17 +26,17 @@ const LocationInfo = styled.div`
 `
 const LocationTitle = styled.div`
   padding: 10px 0;
-  font-size: calc(12px + 1.4vmin);
+  font-size: calc(12px + 0.8vmin);
   letter-spacing: -1px;
   font-weight: 600;
 `
 const LocationAddr = styled.div`
-  font-size: calc(8px + 1.4vmin);
+  font-size: calc(10px + 0.8vmin);
   color: #555;
   line-height: 1.7;
   text-align: center;
   span {
-    font-size: calc(7px + 1.4vmin);
+    font-size: calc(7px + 0.8vmin);
   }
 `
 const ImgIcon = styled.img`
