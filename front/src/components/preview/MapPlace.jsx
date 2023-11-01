@@ -39,11 +39,6 @@ const LocationAddr = styled.div`
     font-size: calc(7px + 1.4vmin);
   }
 `
-const CopyImg = styled(ContentCopyIcon)`
-  position: absolute;
-  margin-left: 8px;
-  width: 0.8em;
-`
 const ImgIcon = styled.img`
   width: 100px;
 `
@@ -83,7 +78,14 @@ const MapPlace = () => {
           <LocationTitle>라온제나 분당 8층 플로렌스홀</LocationTitle>
           <LocationAddr>
             {addr}
-            <CopyImg onClick={doCopyAddr} />
+            <ContentCopyIcon
+              onClick={doCopyAddr}
+              style={{
+                position: 'absolute',
+                marginLeft: '8px',
+                width: '0.8em',
+              }}
+            />
             <br />
             <span>(야탑동 366-1) / (판교역 5분, 판교 IC 7분)</span>
           </LocationAddr>

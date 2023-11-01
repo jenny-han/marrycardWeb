@@ -15,7 +15,7 @@ const TitleBoxWithMsg = styled.div`
   margin-bottom: 40px;
 `
 const MsgBox = styled.div`
-  font-size: calc(8px + 1.3vmin);
+  font-size: calc(10px + 0.7vmin);
 `
 
 const Account = () => {

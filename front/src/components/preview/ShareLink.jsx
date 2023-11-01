@@ -27,7 +27,7 @@ const ShareBtn = styled.div`
 
 const ShareLink = () => {
   const doCopyLink = () => {
-    const url = 'https://ch-wedding.kr/card/jyhs1209'
+    const url = 'http://ch-wedding.kr/card/jyhs1209'
     copyDoc('청첩장 링크', url)
   }
   return (

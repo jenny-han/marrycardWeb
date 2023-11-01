@@ -3,6 +3,9 @@ import styled from 'styled-components'
 
 import home_img from '../lib/img/homeimg.png'
 import logo from '../lib/img/logo2.png'
+
+import { Helmet } from 'react-helmet-async'
+
 const HomeBlock = styled.div`
   margin-top: 100px;
   //   font-family: serif;
@@ -12,6 +15,9 @@ const HomeBlock = styled.div`
 const HomePage = () => {
   return (
     <HomeBlock>
+      <Helmet>
+        <title>CH.WEDDING</title>
+      </Helmet>
       <img src={home_img} alt="contents " style={{ marginBottom: '30px' }} />
       <footer
         style={{ background: 'black', minHeight: '100px', padding: '20px' }}

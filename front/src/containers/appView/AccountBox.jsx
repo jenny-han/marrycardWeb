@@ -35,12 +35,6 @@ const BoxTitle = styled.div`
     font-weight: 500;
   }
 `
-const ArrowImg = styled(ExpandMoreIcon)`
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  margin-top: -0.5em;
-`
 
 const ToggleWrap = styled.div`
   :last-child {
@@ -107,8 +101,14 @@ const AccountBox = (props) => {
           style={type === 'groom' ? { color: '#595d3b' } : { color: '#856442' }}
         >
           {typeKor}측
-          <ArrowImg
-            style={showAccountList ? { transform: 'rotate(180deg)' } : {}}
+          <ExpandMoreIcon
+            style={{
+              position: 'absolute',
+              right: '20px',
+              top: '50%',
+              marginTop: '-0.5em',
+              transform: showAccountList ? 'rotate(180deg)' : '',
+            }}
           />
         </span>
       </BoxTitle>
