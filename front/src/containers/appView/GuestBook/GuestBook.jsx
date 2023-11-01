@@ -37,25 +37,26 @@ const GuestBook = () => {
     }
   }
 
-  const initGuestBookList = useCallback(() => {
-      axiosInstance
-        .get(`api/sample/guestbooks/count`, { params: { cardId } })
-        .then((resCnt) => {
-          setCount(resCnt.data)
-          axiosInstance
-            .get(`api/sample/guestbooks/page`, { params: { cardId, pageNumber: 0, pageSize: PAGE_SIZE } })
-            .then((res) => {
-              if (Array.isArray(res.data)) {
-                const list = res.data
-                setGuestBookList(list)
-                setLastId(list[list.length - 1].id)
-              } else 
-                setGuestBookList([])
-            })
-            .catch((err) => console.log(err))
-        })
-        .catch((err) => console.log(err))
-    }, [])
+  const initGuestBookList = () => {
+    axiosInstance
+      .get(`api/sample/guestbooks/count`, { params: { cardId } })
+      .then((resCnt) => {
+        setCount(resCnt.data)
+        axiosInstance
+          .get(`api/sample/guestbooks/page`, { params: { cardId, pageNumber: 0, pageSize: PAGE_SIZE } })
+          .then((res) => {
+            if (Array.isArray(res.data) 
+              && res.data.length > 0) {
+              const list = res.data
+              setGuestBookList(list)
+              setLastId(list[list.length - 1].id)
+            } else 
+              setGuestBookList([])
+          })
+          .catch((err) => console.log(err))
+      })
+      .catch((err) => console.log(err))
+    }
 
   const loadGuestBookList = useCallback(() => {
       axiosInstance
