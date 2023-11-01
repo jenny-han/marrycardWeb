@@ -10,6 +10,7 @@ const AttendanceBlock = styled.div`
 
 const FormBlock = styled.div`
   width: 95%;
+  height: 420px;
   font-size: 3vw;
   display: inline-flex;
   position: relative;
@@ -41,6 +42,10 @@ const MyInput = styled.input`
   border: 0;
 `
 
+const SelctButtonWrap = styled.div`
+  display: flex;
+`
+
 const SelectButton = styled.button`
   width: 40%;
   border-radius: 2vw;
@@ -53,13 +58,17 @@ const SelectButton = styled.button`
   margin: 3vw 2vw;
   cursor: pointer;
 `
-
-const MySelectBox = styled.select`
-  width: 90%;
-  padding: 2vw;
-  margin-left: 2vw;
-  font-size: 3.5vw;
-  border: 0;
+const SelectButton2 = styled.button`
+  width: 40%;
+  border-radius: 2vw;
+  box-sizing: border-box;
+  font-size: 3vw;
+  color: #fff;
+  background-color: #ddd;
+  border: 1px solid #ddd;
+  padding: 2vw 2vw;
+  margin: 3vw 2vw;
+  cursor: pointer;
 `
 
 const SubmitButton = styled.button`
@@ -85,17 +94,16 @@ export const AttendanceDialog = ({
   open,
   onClose,
   inputs,
-  optionNumber = 0,
   onChangeAuthor,
   onChangeAddPeople,
-  onClickGroom,
-  onClickBride,
-  handleSubmit,
+  selectSide,
+  selectRepast,
+  handleSubmit
 }) => {
   return (
     <Dialog 
       fullWidth={true}
-      maxWidth='md'
+      maxWidth='sm'
       open={open}
       onClose={onClose}
       // disableBackdropClick={!backdropClick}
@@ -120,7 +128,28 @@ export const AttendanceDialog = ({
           <AttendanceBlock>
             <FormBlock>
               <InputWrap>
-                <MyLabel>참석자</MyLabel>
+                <MyLabel>구분</MyLabel>
+                <SelctButtonWrap>
+                  <SelectButton 
+                    style={
+                      inputs.side === 'G' ?
+                      selectStyle : {}
+                    }
+                    type="button"
+                    onClick={()=>selectSide('G')}>
+                    신랑측
+                  </SelectButton>
+                  <SelectButton
+                    style={
+                      inputs.side === 'B' ?
+                      selectStyle : {}
+                    }
+                    type="button"
+                    onClick={()=>selectSide('B')}>
+                    신부측
+                  </SelectButton>
+                </SelctButtonWrap>
+                <MyLabel>성함</MyLabel>
                 <MyInput
                   style={{ borderBottom: '1px solid #ddd' }}
                   type="text"
@@ -130,44 +159,47 @@ export const AttendanceDialog = ({
                   value={inputs.name}
                   onChange={onChangeAuthor}
                 />
-                <MyLabel>구분</MyLabel>
-                <div>
-                  <SelectButton 
-                    style={
-                      inputs.pos === 'G' ?
-                      selectStyle :
-                      {}
-                    }
-                    type="button"
-                    onClick={onClickGroom}>
-                    신랑측
-                  </SelectButton>
-                  <SelectButton
-                    style={
-                      inputs.pos === 'B' ?
-                      selectStyle :
-                      {}
-                    }
-                    type="button"
-                    onClick={onClickBride}>
-                    신부측
-                  </SelectButton>
-                </div>
+                
                 <MyLabel>참석인원</MyLabel>
-                <MySelectBox
+                <MyInput
                   style={{ borderBottom: '1px solid #ddd' }}
-                  name="additionalPeople"
+                  type="number"
+                  name="addPeople"
+                  placeholder="본인 포함 총 참석인원을 입력해 주세요."
+                  maxLength={10}
                   value={inputs.addPeople}
                   onChange={onChangeAddPeople}
-                >
-                  {
-                    Array(optionNumber+1).fill(0).map((_, i)=>
-                      <option key={i} value={i}>
-                        외 {i}명
-                      </option>
-                    )
-                  }
-                </MySelectBox>
+                />
+                <MyLabel>식사여부</MyLabel>
+                <SelctButtonWrap>
+                  <SelectButton2 
+                    style={
+                      inputs.repast === 'Y' ?
+                      selectStyle : {}
+                    }
+                    type="button"
+                    onClick={()=>selectRepast('Y')}>
+                    예정
+                  </SelectButton2>
+                  <SelectButton2
+                    style={
+                      inputs.repast === 'N' ?
+                      selectStyle : {}
+                    }
+                    type="button"
+                    onClick={()=>selectRepast('N')}>
+                    안함
+                  </SelectButton2>
+                  <SelectButton2
+                    style={
+                      inputs.repast === 'U' ?
+                      selectStyle : {}
+                    }
+                    type="button"
+                    onClick={()=>selectRepast('U')}>
+                    미정
+                  </SelectButton2>
+                </SelctButtonWrap>
                 <SubmitButton 
                   type="button" 
                   onClick={handleSubmit}>

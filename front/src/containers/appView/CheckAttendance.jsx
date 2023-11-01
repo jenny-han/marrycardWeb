@@ -24,11 +24,19 @@ const NewMemo = styled.div`
 
 const CheckAttendance = () => {
   const [open, setOpen] = useState(false)
-  const [inputs, setInputs] = useState({name:'', addPeople:0, pos:''})
+  const [inputs, setInputs] = useState({name:'', addPeople:0, side:'', repast:''})
 
   const submit = ()=>{
     console.log('test');
     setOpen(false)
+  }
+
+  const selectSide = (v) => {
+    setInputs(prev=>{return {...prev, side : v}})
+  }
+
+  const selectRepast = (v) => {
+    setInputs(prev=>{return {...prev, repast : v}})
   }
 
   return (
@@ -45,10 +53,8 @@ const CheckAttendance = () => {
                 setInputs(prev=>{return {...prev, name : e.target.value}})}
         onChangeAddPeople={(e) => 
                 setInputs(prev=>{return {...prev, addPeople : e.target.value}})}
-        onClickGroom={(e) => 
-                setInputs(prev=>{return {...prev, pos : 'G'}})}
-        onClickBride={(e) => 
-                setInputs(prev=>{return {...prev, pos : 'B'}})}
+        selectSide={selectSide}
+        selectRepast={selectRepast}
         handleSubmit={submit}
         />
     </AttendanceBlock>
@@ -56,3 +62,4 @@ const CheckAttendance = () => {
 }
 
 export default CheckAttendance
+
