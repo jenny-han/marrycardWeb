@@ -65,7 +65,7 @@ const SwiperSlider = () => {
       <Swiper
         style={{
           '--swiper-navigation-color': '#808080',
-          '--swiper-navigation-size': '25px',
+          '--swiper-navigation-size': '20px',
         }}
         {...swiperParams}
         ref={setSwiper}

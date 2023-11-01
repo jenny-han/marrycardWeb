@@ -8,7 +8,7 @@ import CardTitleText from '../common/CardTitleText'
 const CalendarBlock = styled.div`
   background: #fff;
   font-family: 'JeonjuCraftGoR';
-  font-size: 1.2em;
+  font-size: calc(7px + 1.5vmin);
   line-height: 1.5;
   text-align: center;
   padding-top: 35px;

@@ -14,7 +14,7 @@ const MemoTitle = styled.div`
     background: #dce5dc;
     display: inline-block;
     border-radius: 20px;
-    font-size: 1.3em;
+    font-size: 16px;
     margin: 0 auto;
     padding: 0 24px;
   }
@@ -24,7 +24,6 @@ const MemoTitle = styled.div`
 `
 
 const CardMemoBox = (props) => {
-  console.log(props)
   return (
     <CardMemoBoxBlock>
       <MemoTitle>

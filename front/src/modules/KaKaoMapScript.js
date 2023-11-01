@@ -8,19 +8,6 @@ let map;
 export default function KakaoMapScript(lat,lng) {
     lat = lat;
     lng = lng;
-    // var staticMapContainer  = document.getElementById('map'), // 이미지 지도를 표시할 div 
-	// 	    staticMapOption = {
-	// 	        center: new kakao.maps.LatLng(lat, lng), // 이미지 지도의 중심 좌표
-	// 	        level: 3, // 이미지 지도의 확대 레벨
-	// 	        mapTypeId : kakao.maps.MapTypeId.ROADMAP, // 지도종류
-    //             //set Marker
-    //             marker : {
-	// 	        	 // 좌표가 없으면 지도 중심에 마커가 표시된다
-	// 	        },
-	// 	    };
-
-	// 	// 이미지 지도를 생성한다
-    // map = new kakao.maps.StaticMap(staticMapContainer, staticMapOption);
     const container = document.getElementById('map');
     container.innerHTML = '';
 

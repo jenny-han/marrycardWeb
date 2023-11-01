@@ -3,16 +3,14 @@ import styled from 'styled-components'
 import { copyDoc } from '../../modules/copy.js'
 
 const ToggleBlock = styled.div`
-  padding: 20px 15px;
+  padding: 20px 13px;
   border-bottom: 1px dashed;
-  font-size: 0.9em;
 `
 const AccountInfo = styled.div`
   position: relative;
-  font-size: 1em;
   color: #000;
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -24,22 +22,23 @@ const AccountInfo = styled.div`
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-
+  font-size: calc(10px + 0.7vmin);
   em {
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
-    font-size: 0.9em;
+    font-size: calc(10px + 0.6vmin);
+    white-space: nowrap;
     position: relative;
     margin-left: 7px;
     letter-spacing: -0.02em;
   }
 `
 const AccountName = styled.div`
-  font-weight: 300;
+  // font-weight: 300;
   color: #000;
-  font-size: 0.8em;
+  font-size: calc(9px + 0.6vmin);
   em {
-    font-size: 1.2em;
+    font-size: calc(11px + 0.6vmin);
     font-style: normal;
   }
 `
@@ -54,7 +53,7 @@ const BankCopyBtn = styled.button`
   margin-top: 20px;
   text-align: center;
   background: #fff;
-  font-size: 1em;
+  font-size: 14px;
   padding: 10px;
   color: #222;
   font-weight: 500;

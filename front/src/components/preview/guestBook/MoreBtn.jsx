@@ -12,6 +12,7 @@ const MoreBtnBlock = styled.div`
   font-size: 1.1em;
   width: 90%;
   text-align: center;
+  cursor: pointer;
 `
 
 export const MoreBtn = ({ message, isMore, onClick }) => {

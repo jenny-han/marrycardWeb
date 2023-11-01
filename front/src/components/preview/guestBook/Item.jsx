@@ -34,6 +34,8 @@ const Content = styled.p`
   overflow-y: scroll;
   max-height: 50px;
   font-size: 1.1em;
+  word-wrap: break-word;
+}
 `
 const PwConfirm = styled.div`
   margin-top: 10px;
@@ -50,7 +52,7 @@ const MyInput = styled.input`
   font-size: 1em;
 `
 
-const ConfirmPWBtn = styled.div`
+const ConfirmPWBtn = styled.button`
   width: 100%;
   padding: 10px;
   margin: 10px 0;
@@ -58,8 +60,9 @@ const ConfirmPWBtn = styled.div`
   text-align: center;
   background: #887d77;
   border-radius: 10px;
+  border: 1px solid #887d77;
   color: #fff;
-  text-decoration: none;
+  cursor: pointer;
 `
 
 export const Item = ({

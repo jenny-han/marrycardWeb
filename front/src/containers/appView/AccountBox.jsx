@@ -9,7 +9,7 @@ const AccountBoxBlock = styled.div`
   border: 1px solid;
   margin-bottom: 20px;
   width: 80%;
-  font-size: 1.2em;
+  word-break: keep-all;
 `
 const BoxTitle = styled.div`
   padding: 0 0 5px 15px;
@@ -30,7 +30,9 @@ const BoxTitle = styled.div`
   span {
     padding-left: 15px;
     line-height: 1.5;
-    font-size: 1em;
+    font-size: 17px;
+    margin-top: 3px;
+    font-weight: 500;
   }
 `
 const ArrowImg = styled(ExpandMoreIcon)`

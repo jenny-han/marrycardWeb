@@ -13,12 +13,13 @@ const ShareLinkBlock = styled.div`
 `
 const ShareBox = styled.div`
   margin-top: 30px;
-  width: 30%;
+  width: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
 `
 const ShareBtn = styled.div`
+  cursor: pointer;
   img {
     width: 50px;
   }
@@ -35,11 +36,11 @@ const ShareLink = () => {
       <ShareBox>
         <ShareBtn onClick={sendMessage}>
           {/* 카카오톡공유 */}
-          <img src={kakao} alt="kakao" />
+          <img src={kakao} alt="kakao" title="카카오톡으로 공유하기" />
         </ShareBtn>
         <ShareBtn onClick={doCopyLink}>
           {/* 링크복사 */}
-          <img src={link} alt="link" />
+          <img src={link} alt="link" title="링크 복사하기" />
         </ShareBtn>
       </ShareBox>
     </ShareLinkBlock>

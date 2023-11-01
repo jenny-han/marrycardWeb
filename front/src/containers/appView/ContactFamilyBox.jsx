@@ -8,19 +8,19 @@ display: inline-block;
 vertical-align: top;
 position: relative;
 width: 50%;
-padding: 0 15px;
+padding: 0 10px;
 box-sizing: border-box;
 }`
 const TitleSpan = styled.span`
   margin-bottom: 20px;
   display: block;
-  font-size: 1.2em;
+  font-size: calc(10px + 1.2vmin);
 `
 const FamilyBox = styled.div`
   text-align: center;
-  padding: 10px;
+  padding: 6px;
   a {
-    height: 45px;
+    padding: 10px 15px;
     box-sizing: border-box;
     border-radius: 10px;
     background: #554640;
@@ -40,12 +40,13 @@ const FamilyBox = styled.div`
 `
 const FTitle = styled.div`
   color: #f7f0e8;
-  font-size: 1.2em;
+  font-size: calc(11px + 1vmin);
+  word-break: keep-all;
   font-weight: normal;
 `
 const CallIcon = styled.img`
   margin-left: 10px;
-  width: 25px;
+  width: 1.4em;
 `
 const ContactFamilyBox = (props) => {
   const { type } = props

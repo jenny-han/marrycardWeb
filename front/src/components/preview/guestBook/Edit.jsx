@@ -10,19 +10,21 @@ const NewMemo = styled.div`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 45%;
-  padding: 10px;
+  min-width: 45%;
+  padding: 10px 30px;
   border: #ece1d5;
   border-radius: 10px;
   font-size: 1.2em;
   margin: 20px 0;
+  white-space: nowrap;
+  word-break: keep-all;
 `
 
 const FormBlock = styled.div`
   margin: 10px;
   width: 90%;
   height: 260px;
-  font-size: 1em;
+  font-size: 13px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -46,7 +48,6 @@ const MyInput = styled.input`
   width: 45%;
   padding: 10px;
   margin-left: 10px;
-  font-size: 1em;
   border: 0;
 `
 
@@ -54,7 +55,7 @@ const TextArea = styled.textarea`
   height: 110px;
   border: none;
   box-sizing: border-box;
-  font-size: 1.4em;
+  font-size: 1.2em;
   width: 100%;
   color: #222;
   font-weight: 400;
@@ -68,8 +69,8 @@ const SubmitButton = styled.button`
   box-sizing: border-box;
   font-size: 1em;
   color: #fff;
-  background-color: #725442;
-  border: 1px solid #725442;
+  background-color: #887d77;
+  border: 1px solid #887d77;
   padding: 10px 20px;
   margin: 10px 0;
   cursor: pointer;

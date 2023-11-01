@@ -26,23 +26,23 @@ const LocationInfo = styled.div`
 `
 const LocationTitle = styled.div`
   padding: 10px 0;
-  font-size: 1.5em;
+  font-size: calc(12px + 1.4vmin);
   letter-spacing: -1px;
   font-weight: 600;
 `
 const LocationAddr = styled.div`
-  font-size: 1.2em;
+  font-size: calc(8px + 1.4vmin);
   color: #555;
   line-height: 1.7;
   text-align: center;
   span {
-    font-size: 0.9em;
+    font-size: calc(7px + 1.4vmin);
   }
 `
 const CopyImg = styled(ContentCopyIcon)`
-  position: relative;
-  margin-left: 10px;
-  margin-top: 10px;
+  position: absolute;
+  margin-left: 8px;
+  width: 0.8em;
 `
 const ImgIcon = styled.img`
   width: 100px;
@@ -51,14 +51,14 @@ const MapTitle = styled.div`
   margin: 10px;
   // font-family: 'Nanum Myeongjo', serif;
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 20px;
 `
 const SubwayBtn = styled.span`
   padding: 5px;
   border-radius: 60px;
   background-color: #fff;
   color: rgb(241, 201, 64);
-  font-size: 0.9em;
+  font-size: 14px;
   font-weight: 700;
   border: 2px solid;
 `
@@ -97,7 +97,13 @@ const MapPlace = () => {
       ></MapLocation>
       {/* <Divider variant="middle" /> */}
       <CardMemoBox title=" 대절버스안내 ">
-        <div style={{ padding: '40px 0 10px 0' }}>
+        <div
+          style={{
+            padding: '40px 0 10px 0',
+            fontSize: '14px',
+            wordBreak: 'keep-all',
+          }}
+        >
           🚍 오전 11시30분 출발 <br />
           삼성동 119안전센터 ( 구 대전 중부소방서 ) <br />
           |

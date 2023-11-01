@@ -5,6 +5,7 @@ const EmptyBlock = styled.div`
   margin-top: 10px;
   font-family: 'Noto Sans KR', sans-serif;
   padding: 10px 10px;
+  word-break: keep-all;
 `
 const EmptyP = styled.p`
   background-color: #fefefe;

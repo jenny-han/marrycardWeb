@@ -39,7 +39,7 @@ const CircleImgBox = styled.div`
   }
 `
 const NameStrong = styled.strong`
-  font-size: 1.6em;
+  font-size: calc(11px + 1.4vmin);
   color: #fff;
   font-weight: 400;
   display: block;
@@ -69,15 +69,15 @@ const ContactName = styled.div`
     position: relative;
     font-weight: 500;
     color: #f7f0e8;
-    font-size: 1.2em;
+    font-size: calc(8px + 1.5vmin);
     padding-left: 10px;
   }
 `
 const ContactImgBox = styled.div`
   //   background-repeat: no-repeat;
   background-size: cover;
-  width: 18px;
-  height: 18px;
+  width: 1em;
+  height: 1em;
 `
 
 const ContactCoupleBox = (props) => {

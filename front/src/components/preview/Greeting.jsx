@@ -20,7 +20,7 @@ const SubTitle = styled.p`
   margin: 50px 0;
   // margin-bottom: ;
   color: white;
-  font-size: 1.3em;
+  font-size: calc(10px + 1.3vmin);
   line-height: 1.4;
   letter-spacing: -0.05em;
 `

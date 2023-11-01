@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const CalendarDdayDiv = styled.div`
-  font-size: 1em;
+  font-size: calc(7px + 1.3vmin);
   font-weight: 500;
   letter-spacing: -0.25px;
   background: #fcfaf2;
@@ -21,7 +21,6 @@ const CalendarDday = (props) => {
   let todaydate = new Date(nowyear, nowmonth, nowday)
   // let todaydate = new Date(2023, 9, 28)
 
-  console.log(todaydate)
   let year = wd_date.substring(0, 4)
   let month = wd_date.substring(4, 6)
   let day = wd_date.substring(6, 8)

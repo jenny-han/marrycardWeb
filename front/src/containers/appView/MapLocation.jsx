@@ -32,7 +32,7 @@ const SetCenterBtn = styled.div`
   }
 `
 const MapDetailLink = styled.div`
-  font-size: 1.2em;
+  font-size: 15px;
   padding: 15px 0;
   background-color: #ecebdb;
 `
@@ -44,14 +44,14 @@ const NaviBtnBox = styled.div`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 45%;
+  width: 200px;
   padding: 10px;
   background-color: #fff;
   border: #faf6f2;
   border-radius: 10px;
   margin: 10px;
-  //   font-family: 'Noto Sans KR', sans-serif;
-  font-size: 1.2em;
+  // font-family: 'Noto Sans KR', sans-serif;
+  font-size: calc(12px + 0.8vmin);
   img {
     border-radius: 5px;
     border: 1px solid #fff;
@@ -61,9 +61,9 @@ const NaviBtnBox = styled.div`
 `
 const HowtoGoH3 = styled.h3`
   margin-bottom: 20px;
-  //   font-family: 'Nanum Myeongjo', serif;
+  // font-family: 'Nanum Myeongjo', serif;
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 20px;
 `
 const MapLocation = (props) => {
   const { lat, lng, name, placeId } = props
