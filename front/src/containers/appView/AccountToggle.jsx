@@ -24,7 +24,7 @@ const AccountInfo = styled.div`
   justify-content: space-between;
   font-size: calc(10px + 0.7vmin);
   em {
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     font-size: calc(10px + 0.6vmin);
     white-space: nowrap;
@@ -34,13 +34,13 @@ const AccountInfo = styled.div`
   }
 `
 const AccountName = styled.div`
-  font-weight: 400;
+  font-weight: 300;
   color: #000;
   font-size: calc(9px + 0.6vmin);
   em {
     font-size: calc(11px + 0.6vmin);
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
   }
 `
 const AccountBtn = styled.div`
@@ -58,7 +58,7 @@ const BankCopyBtn = styled.button`
   font-size: 14px;
   padding: 10px;
   color: #222;
-  font-weight: 400;
+  font-weight: 500;
   border: none;
 `
 
