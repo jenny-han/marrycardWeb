@@ -6,6 +6,7 @@ import CardLayout from './layout/CardLayout'
 import EditorPage from './pages/EditorPage'
 import AppViewPage from './pages/AppViewPage'
 import HomePage from './pages/HomePage'
+import { Helmet } from 'react-helmet-async'
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Route path="/editor" element={<EditorPage />} />
       </Route>
       <Route element={<CardLayout />}>
-      <Route path="/card/:url" element={<AppViewPage />}/>
+        <Route path="/card/:url" element={<AppViewPage />} />
       </Route>
     </Routes>
   )

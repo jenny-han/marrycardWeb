@@ -10,6 +10,7 @@ const AccountBoxBlock = styled.div`
   margin-bottom: 20px;
   width: 80%;
   word-break: keep-all;
+  font-family: 'Pretendard-Regular';
 `
 const BoxTitle = styled.div`
   padding: 0 0 5px 15px;
@@ -32,7 +33,7 @@ const BoxTitle = styled.div`
     line-height: 1.5;
     font-size: 17px;
     margin-top: 3px;
-    font-weight: 500;
+    font-weight: 700;
   }
 `
 

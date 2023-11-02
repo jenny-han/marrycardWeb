@@ -14,7 +14,7 @@ const NewMemo = styled.div`
   padding: 10px 30px;
   border: #ece1d5;
   border-radius: 10px;
-  font-size: 1.2em;
+  font-size: 1em;
   margin: 20px 0;
   white-space: nowrap;
   word-break: keep-all;

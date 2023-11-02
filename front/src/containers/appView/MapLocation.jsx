@@ -44,14 +44,14 @@ const NaviBtnBox = styled.div`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 200px;
+  width: 45%;
   padding: 10px;
   background-color: #fff;
   border: #faf6f2;
   border-radius: 10px;
   margin: 10px;
   // font-family: 'Noto Sans KR', sans-serif;
-  font-size: calc(12px + 0.8vmin);
+  font-size: calc(11px + 0.8vmin);
   img {
     border-radius: 5px;
     border: 1px solid #fff;

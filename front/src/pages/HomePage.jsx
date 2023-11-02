@@ -3,8 +3,9 @@ import styled from 'styled-components'
 
 import home_img from '../lib/img/homeimg.png'
 import logo from '../lib/img/logo2.png'
+import ogimg from '../lib/img/noname.png'
 
-import { Helmet } from 'react-helmet-async'
+import MetaTag from '../layout/SEOMetaTag'
 
 const HomeBlock = styled.div`
   margin-top: 100px;
@@ -15,9 +16,11 @@ const HomeBlock = styled.div`
 const HomePage = () => {
   return (
     <HomeBlock>
-      <Helmet>
-        <title>CH.WEDDING</title>
-      </Helmet>
+      <MetaTag
+        title="CH.WEDDING"
+        imgsrc={ogimg}
+        description="당신만을 위한 청첩장, 채널 웨딩"
+      />
       <img src={home_img} alt="contents " style={{ marginBottom: '30px' }} />
       <footer
         style={{ background: 'black', minHeight: '100px', padding: '20px' }}

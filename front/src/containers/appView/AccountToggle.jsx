@@ -34,12 +34,13 @@ const AccountInfo = styled.div`
   }
 `
 const AccountName = styled.div`
-  // font-weight: 300;
+  font-weight: 400;
   color: #000;
   font-size: calc(9px + 0.6vmin);
   em {
     font-size: calc(11px + 0.6vmin);
     font-style: normal;
+    font-weight: 600;
   }
 `
 const AccountBtn = styled.div`
@@ -48,6 +49,7 @@ const AccountBtn = styled.div`
   text-align: center;
 `
 const BankCopyBtn = styled.button`
+  font-family: 'Pretendard-Regular';
   width: 50%;
   border-radius: 10px;
   margin-top: 20px;
@@ -56,7 +58,7 @@ const BankCopyBtn = styled.button`
   font-size: 14px;
   padding: 10px;
   color: #222;
-  font-weight: 500;
+  font-weight: 400;
   border: none;
 `
 

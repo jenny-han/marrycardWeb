@@ -11,7 +11,7 @@ const EmptyP = styled.p`
   background-color: #fefefe;
   border: #000;
   box-shadow: 2px 2px 5px 0 rgb(0 0 0 / 20%);
-  font-size: 1.2em;
+  font-size: 1em;
   padding: 30px;
   margin: 10px 40px;
   line-height: 2;
