@@ -39,11 +39,19 @@ public class SampleService {
   }
 
   public List<GuestBook> getFirstGuestBooks(int cardId, int pageNumber, int pageSize) {
-    return guestBookRepository.getFirstGuestBooks(cardId, PageRequest.of(pageNumber, pageSize));
+    List<GuestBook> result = guestBookRepository.getFirstGuestBooks(cardId, PageRequest.of(pageNumber, pageSize));
+    for (int i = 0; i < result.size(); i++) {
+      result.get(i).setPassword("");
+    }
+    return result;
   }
 
   public List<GuestBook> getPartofGuestBooks(int cardId, int lastId, int pageSize) {
-    return guestBookRepository.getPartofGuestBooks(cardId, lastId, pageSize);
+    List<GuestBook> result = guestBookRepository.getPartofGuestBooks(cardId, lastId, pageSize);
+    for (int i = 0; i < result.size(); i++) {
+      result.get(i).setPassword("");
+    }
+    return result;
   }
 
   public Integer saveGuestbook(GuestBook guestBook) {
