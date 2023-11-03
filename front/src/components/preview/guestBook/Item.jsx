@@ -8,7 +8,7 @@ const ItemBlock = styled.div`
   margin: 10px 25px;
   padding: 20px 25px;
   font-family: 'Noto Sans KR', sans-serif;
-  font-size: 1.1em;
+  font-size: 1em;
   box-shadow: 2px 2px 5px 0 rgb(0 0 0 / 20%);
 `
 
@@ -16,9 +16,11 @@ const ContTitle = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-size: 1.1em;
 `
 
 const TitleRight = styled.div`
+  font-size: 0.9em;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
